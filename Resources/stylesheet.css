@@ -1,0 +1,99 @@
+.marigns{
+    margin-right:2cm;
+    margin-left:2cm;
+    background-color: rgb(154,160,168);
+}
+
+
+.main_section{
+    background-color: rgb(190, 255, 199);
+}
+
+.main_title{
+    text-align: center;
+    font-size: 70px;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.not-active {
+   pointer-events: none;
+   cursor: default;
+}
+
+.images{
+    max-width: 600px;
+    max-height: 600px;
+    float: right;
+    height:auto;
+    width:auto;
+    border-radius:100px;
+    padding-right:10px;
+}
+
+.navbar .nav.pull-right {
+    float: right;
+    margin-right: 98px; /*set margin this way in your custom styesheet*/
+}
+
+
+.image2{
+    max-width: 1000px;
+    max-height: 700px;
+}
+
+.step{
+    padding-right:10px;
+    max-width: 700px;
+    max-height: 700px;
+}
+
+.step_section{
+    padding-left: 30px;
+    font-size:17px;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif;
+}
+
+.install_tags{
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 30px;
+    border-bottom: 3px solid rgb(0,0,0);
+    display: inline;
+}
+
+#prep_section{
+    padding-left: 30px;
+    font-size:17px;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif;
+}
+
+#question_section{
+    padding-left: 30px;
+    font-size:17px;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif;
+}
+
+
+.node circle {
+	  fill: #fff;
+	  stroke: steelblue;
+	  stroke-width: 3px;
+}
+
+.node text { font: 12px sans-serif; }
+
+.link {
+	  fill: none;
+	  stroke: #ccc;
+	  stroke-width: 2px;
+}
+
+.videoTutorial{
+    position:relative;
+    width: 700px;
+    height: 400px;
+}
+    
