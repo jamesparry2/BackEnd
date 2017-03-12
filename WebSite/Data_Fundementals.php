@@ -16,7 +16,7 @@
         <script src="../Script Files/bootstrap.min.js"></script>
     </head>
 
-    <body class = "main_section">
+    <body onload = "onLoadUpForScore();" class = "main_section">
         
         <nav class = "navbar navbar-default">
             <div class = "container-fluid">
@@ -169,13 +169,45 @@
             <div>
                 <br/>
                 <br/>
+                <?php
+                if(empty($_GET['scoreForSession'])){
+                ?>
                 <div id = "question_section">
                 <p><button onClick = "DisplayQuestion('dataFundementals')">Question Time!</button></p>
+                <form style = "text-align: center;" action ="" method="post">    
                     <p id = "question"></p>
                     <p id = "answers"></p>
                     <p id = "button"></p>
-                    <p id = "score"></p>    
+                    <p id = "score"></p>
+                    <input type="submit" value="Check"/>                
+                </form>           
                 </div>
+                <?php
+                } else {
+                ?>
+                <div id = "question_section">
+                <p><button onClick = "DisplayQuestion('dataFundementals')">Question Time!</button></p>
+                <form style = "text-align: center;" action ="" method="post">    
+                    <p id = "question"></p>
+                    <p id = "answers"></p>
+                    <p id = "button"></p>
+                    <p id = "score"></p>
+                    <input type="submit" value="Check"/>                
+                </form>
+                </div>
+                <?php
+                    //This is where the update the score will be going
+                    $userName = $_SESSION['logged_in'];
+                    $newScore = $_GET['scoreForSession'];
+                    
+                    $updateScoreQuery = "UPDATE users SET Score='$newScore' WHERE Username = '$userName'";
+                    if(mysqli_query($db, $updateScoreQuery)){
+                        echo "Updated done";
+                    } else {
+                        echo "Not done" . mysqli_query($db);
+                    }
+                }
+                ?>
             </div>
         </div>
         <br/>

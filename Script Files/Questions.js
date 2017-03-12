@@ -13,7 +13,7 @@ forMultiChoice[1] = ["When you know how many iterations there are",
 forMultiChoice[2] = ["When you want to know how many iterations are left",
              "When you do not know how many iteration there are",
              "When you know how many iterations there are"];
-forMultiChoice[3] = ["(intalize, check, count)",
+forMultiChoice[3] = ["(intalize: check: count)",
              "(check, count, intalize)",
              "(count, intalize, check)"];
     
@@ -134,7 +134,7 @@ var multiCollectionAnswer = [];
 multiCollectionAnswer [0] = ["ArayLists can be multi-demensional while Arrays can not"];
 multiCollectionAnswer [1] = ["Queue"];
 multiCollectionAnswer [2] = ["Yes"];
-multiCollectionAnswer [3] = ["add(Object O)"];
+multiCollectionAnswer [3] = ["add(Object o)"];
 
 //----------------------------------------------------------------------------------------------------------------
 
@@ -327,7 +327,11 @@ singleInputOutputAnswer [2] = ["PrintWriter out = new PrintWriter(outputFile)"];
 singleInputOutputAnswer [3] = ["close()"];
 
 //----------------------------------------------------------------------------------------------------------------------
-var score = 0; // Finish the automatic changing tomorrow for Mastery Based Learning. Once done try and implement it in cookies so it hold the information          
+var score = 0; // Finish the automatic changing tomorrow for Mastery Based Learning. Once done try and implement it in cookies so it hold the information
+
+function onLoadUpForScore(){
+    history.pushState({}, null, "?scoreForSession=" + score);
+}
 
 //Function that will randomly decide which 
 function DisplayQuestion(pageType){
@@ -404,6 +408,7 @@ function DisplayQuestion(pageType){
     }
     
     var pageType2 = pageType;
+    history.pushState({}, null, "?scoreForSession=" + score);
     
     if(score < 6){
         var output = Math.floor(Math.random() * 2);
@@ -447,7 +452,9 @@ function MultiQuest(questions, choices, answer, pageType){
     }
     document.getElementById('answers').innerHTML = choicesOut.join("");
     document.getElementById('button').innerHTML = '<p><button onClick = "MultiAnswer();">Submit</button></p>';
-    document.getElementById('score').innerHTML = '<p>' + score + '<p>';
+    document.getElementById('score').innerHTML = '<p id = "new">' + score + '<p>';
+    history.pushState({}, null, "?scoreForSession=" + score);
+    
 }
 
 function MultiAnswer(){
@@ -473,6 +480,7 @@ function MultiAnswer(){
         score = 0;
     }
     i = 0;
+    history.pushState({}, null, "?scoreForSession=" + score);
     DisplayQuestion(pageType1);
 }
 
@@ -498,7 +506,8 @@ function SingleQuestion(question, answer, pageType){
     document.getElementById('question').innerHTML = '<p id = "Q1">' + question[output] + '<p><br>';    
     document.getElementById('answers').innerHTML = '<input id = "answerPoint" type="text" value="">';
     document.getElementById('button').innerHTML = '<p><button onClick = "inputAnswers();">Submit</button></p>';
-    document.getElementById('score').innerHTML = '<p>' + score + '<p>';
+    document.getElementById('score').innerHTML = '<p id = "new">' + score + '<p>';
+    history.pushState({}, null, "?scoreForSession=" + score);
 }
 
 function inputAnswers(question, answer){
@@ -516,7 +525,8 @@ function inputAnswers(question, answer){
         alert("Not Correct");
         score = 0;
     }
-     DisplayQuestion(pageType1);
+    history.pushState({}, null, "?scoreForSession=" + score);
+    DisplayQuestion(pageType1);
 }
 
 function singleQuestions(currentQuestion, question){
@@ -529,26 +539,3 @@ function singleQuestions(currentQuestion, question){
 }
 
 //------------------------------------------------------------------------
-
-var cookies = {};
-
-function saveCookies(){
-    myCookies = document.getElementById('score').textContent;
-    //document.cookie = 'score='score;
-    for(var key in myCookies){
-        cookieString = key+'='+myCookies+';';
-        document.cookie = cookieString;
-    }
-    document.getElementById('score').innerHTML = document.cookie;
-}
-
-function loadCookies(){
-    myCookies = {};
-    var kv = document.cookie.split(';');
-    for(var id in kv){
-        var cookie =kv[id].split('=');
-        myCookies[cookie[0].trim()] = cookie[1];
-    }
-    
-    document.getElementById('score').value = myCookies['_score'];
-}

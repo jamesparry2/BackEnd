@@ -13,7 +13,7 @@
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="../Script Files/bootstrap.min.js"></script>
     </head>
-<body class = "main_section">
+<body onload = "onLoadUpForScore();" class = "main_section">
         
         <nav class = "navbar navbar-default">
             <div class = "container-fluid">
@@ -155,18 +155,52 @@
     <br/>
     <div class = "step_section">
         <h3 class="install_tags"> Question Segment </h3>
+            <div>
+                <br/>
+                <br/>
+                <?php
+                if(empty($_GET['scoreForSession'])){
+                ?>
+                <div id = "question_section">
+                <p><button onClick = "DisplayQuestion('inheritance')">Question Time!</button></p>
+                <form style = "text-align: center;" action ="" method="post">    
+                    <p id = "question"></p>
+                    <p id = "answers"></p>
+                    <p id = "button"></p>
+                    <p id = "score"></p>
+                    <input type="submit" value="Check"/>                
+                </form>           
+                </div>
+                <?php
+                } else {
+                ?>
+                <div id = "question_section">
+                <p><button onClick = "DisplayQuestion('inheritance')">Question Time!</button></p>
+                <form style = "text-align: center;" action ="" method="post">    
+                    <p id = "question"></p>
+                    <p id = "answers"></p>
+                    <p id = "button"></p>
+                    <p id = "score"></p>
+                    <input type="submit" value="Check"/>                
+                </form>
+                </div>
+                <?php
+                    //This is where the update the score will be going
+                    $userName = $_SESSION['logged_in'];
+                    $newScore = $_GET['scoreForSession'];
+                    
+                    $updateScoreQuery = "UPDATE users SET Score7='$newScore' WHERE Username = '$userName'";
+                    if(mysqli_query($db, $updateScoreQuery)){
+                        echo "Updated done";
+                    } else {
+                        echo "Not done" . mysqli_query($db);
+                    }
+                }
+                ?>
+            </div>    
     </div>
     <br/>
     <br/>
-    <div>
-        <div id = "question_section">
-        <p><button onClick = "DisplayQuestion('inheritance')">Question Time!</button></p>
-        <p id = "question"></p>
-        <p id = "answers"></p>
-        <p id = "button"></p>
-        <p id = "score"></p>    
-    </div>
-    </div>
     <br/>
     </body>
 </html>
