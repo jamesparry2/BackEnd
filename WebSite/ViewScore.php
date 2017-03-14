@@ -1,6 +1,5 @@
 <?php
-    // Variable DB is created and is assigned to a connection string
-    $db = mysqli_connect('localhost','root','','teachingaidapp') or die('Error connecting to MYSQl');
+    $db = mysqli_connect('localhost','root','','teachingaidapp') or die('Error connecting to MySql');
     session_start();
 ?>
 
@@ -88,134 +87,14 @@
                                   }?></li>
                         <li><?php error_reporting(0); 
                             if($_SESSION['logged_in'] == 'jamesparry3'){
-                                    echo "<a href = '' class = ''>"." View Scores" . "</a>";  
+                                    echo "<li class = 'active'/><a href = '' class = ''>"." View Scores" . "</a>,</li>";  
                                   } ?></li>
                     </ul>
                 </div>
             </div>    
         </nav>
         <div id = "title_section">
-            <h1 class = "main_title">Data Fundementals</h1>
+            <h1 class = "main_title">View Scores</h1>
         </div>
-        <br/>
-        <br/>
-        <div class = "step_section">
-            <h3 class = "install_tags">Section 1: What are they?</h3>
-            <br/>
-            <br/>
-            <p>In programming you will want the ability to store values and carry them through the lifespan of the program. This is obtainable by using variables
-            which are used as place holders for the information. An example of what they look like can be seen below:</p>
-            <img class = "step" src = "../Resources/example_of_var.png" alt = "Example of variables: int apples = 5">
-        </div>
-        <br/>
-        <br/>
-        <div class = "step_section">
-            <h3 class = "install_tags">Section 1.1: Variables</h3>
-            <br/>
-            <br/>
-            <h4>Variable Declration:</h4>
-            <p>As we can see in the above image we have declared 3 variables, but what does the syntax for the declrartion mean?. Well it can be broken up into three parts.
-            These 3 parts would be: Data Type, Name, Intialzation where Data Type = int, Name = apples and Intialzation = 5. We must always end the decleration of a variable with
-            a semicolen(;)</p>
-            <br/>
-            <h4>Variable Name:</h4>
-            <p>When chosing a name for the variable it is desired that you chose a name which is releveant to what its purpose is in the program. An example of a bad choice
-            would be <code>int x = 12;</code> We have no idea what the purpose of x would be so this would lead to poor maintainabilty of the code. They may also not be named 
-            with reserved keywords.</p>
-            <br/>
-            <h4>Variable Constants:</h4>
-            <p>A variable declared with the reserved keyword final becomes unchangable. Normally variables that are used with final and written in capitals. An example of this would
-            be: <code>final double MAX_CAP  = 20;</code></p>
-        </div>
-        <br/>
-        <br/>
-        <div class = "step_section">
-            <h3 class = "install_tags">Section 1.2: Arthemtic Operators</h3>
-            <br/>
-            <br/>
-            <h4>Arthemtic:</h4>
-            <p>In Java (or pretty much most imperative lanunages) you are able to carry out the 4 basic arithmetic opertations (+, -, /, *). When we create a athermetic operation
-            it is called an expression i.e (a + b) * c would be an expression. Incrementation and/or Decrementation has a shorthand notation if we are doing it by 1. Rather than doing
-            counter + 1 you can do counter++ which is equivilant.</p>
-            <br/>
-            <h4>Arthemtic Restrictions:</h4>
-            <p>Not all arthemtic can be performed using their notations however Java has implemented ways so you can use them, an example would be Math.PI allows you to use Pi in your
-            mathmatical expressions.</p>
-        </div>
-        <br/>
-        <br/>
-        <div class = "step_section">
-            <h3 class= "install_tags">Section 1.3:Input/Output(I/O)</h3>
-            <br/>
-            <br/>
-            <p>In programming we can make the applications much more flexibale if we allow for user interaction. Below is a screenshot that we will analysis on how to do read and write 
-            due to users input.</p>
-            <img src="../Resources/IOExample.png" alt = "IO Example">
-            <br/>
-            <br/>
-            <p>So as we can see above we have imported the Scanner class on line 1. This is required if we want to be able to use a Scanner Object. Once imported we then create a Scanner Object
-            which will allow us to get input from the keyboard. This is created on line 5. We then ask the user for some input and using the Scanner Object in we look for the next Integer Input and store
-            it in a variable.</p>
-        </div>
-        <br/>
-        <br/>
-        <div class = "step_section">
-            <h3 class="install_tags"> Video Segment </h3>
-            <br>
-            <br>
-            <iframe class = "videoTutorial" src="https://www.youtube.com/embed/rVAp53mD3V8" frameborder="0" allowfullscreen></iframe>
-            
-        </div>
-        <br/>
-        <br/>
-        <div class = "step_section">
-            <h3 class="install_tags"> Question Segment </h3>
-            <div>
-                <br/>
-                <br/>
-                <?php
-                if(empty($_GET['scoreForSession'])){
-                ?>
-                <div id = "question_section">
-                <p><button onClick = "DisplayQuestion('dataFundementals')">Question Time!</button></p>
-                <form style = "text-align: center;" action ="" method="post">    
-                    <p id = "question"></p>
-                    <p id = "answers"></p>
-                    <p id = "button"></p>
-                    <p id = "score"></p>
-                    <input type="submit" value="Check"/>                
-                </form>           
-                </div>
-                <?php
-                } else {
-                ?>
-                <div id = "question_section">
-                <p><button onClick = "DisplayQuestion('dataFundementals')">Question Time!</button></p>
-                <form style = "text-align: center;" action ="" method="post">    
-                    <p id = "question"></p>
-                    <p id = "answers"></p>
-                    <p id = "button"></p>
-                    <p id = "score"></p>
-                    <input type="submit" value="Check"/>                
-                </form>
-                </div>
-                <?php
-                    //This is where the update the score will be going
-                    $userName = $_SESSION['logged_in'];
-                    $newScore = $_GET['scoreForSession'];
-                    
-                    $updateScoreQuery = "UPDATE users SET Score='$newScore' WHERE Username = '$userName'";
-                    if(mysqli_query($db, $updateScoreQuery)){
-                        echo "Updated done";
-                    } else {
-                        echo "Not done" . mysqli_query($db);
-                    }
-                }
-                ?>
-            </div>
-        </div>
-        <br/>
-        <br/>
     </body>
-    
-</html>
+</html>    
