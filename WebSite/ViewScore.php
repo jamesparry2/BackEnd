@@ -14,26 +14,51 @@
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="../Script Files/bootstrap.min.js"></script>
         <script>
-        function showUser(user){
-            var xmlhttp;
-            if(user == ""){
-                document.getElementById("userInfo").innerHTML = "Select a valid input";
-                return;
-            }
-
-            if(window.XMLHttpRequest){
-                xmlhttp = new XMLHttpRequest();
-            } else {
-                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-            }
-            xmlhttp.onreadystatechange = function(){
-                if(this.readyState == 4 && this.readyState == 200){
-                    document.getElementById("userInfo").innerHTML = this.responseText;
+            /*
+            
+            onchange="showUser(this.value)
+            
+            function showUser(user){
+                var xmlhttp;
+                if(user == ""){
+                    document.getElementById('userInfo').innerHTML = "Select a valid input";
+                    return;
                 }
+
+                if(window.XMLHttpRequest){
+                    xmlhttp = new XMLHttpRequest();
+                } else {
+                    xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                }
+                xmlhttp.onreadystatechange = function(){
+                    if(xmlhttp.readyState == 4 && xmlhttp.readyState == 200){
+                        document.getElementById('userInfo').innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open('GET', 'usersScore.php?score='+user, true);
+                xmlhttp.send();
             }
-            xmlhttp.open("GET", "usersScore.php?score="+user, true);
-            xmlhttp.send();
-        }
+            
+            $(function(){
+                var url = 'usersScore.php';
+                $.getJSON(url, function(data){
+                    $.each(data, function(index, data){
+                        $('#tbody').append('<tr>');
+                        $('#tbody').append('<td>'+data.Username+'</td>');
+                        $('#tbody').append('<td>'+data.Score+'</td>');
+                        $('#tbody').append('<td>'+data.Score2+'</td>');
+                        $('#tbody').append('<td>'+data.Score3+'</td>');
+                        $('#tbody').append('<td>'+data.Score4+'</td>');
+                        $('#tbody').append('<td>'+data.Score5+'</td>');
+                        $('#tbody').append('<td>'+data.Score6+'</td>');
+                        $('#tbody').append('<td>'+data.Score7+'</td>');
+                        $('#tbody').append('<td>'+data.Score8+'</td>');
+                        $('#tbody').append('<td>'+data.Score9+'</td>');
+                        $('#tbody').append('</tr>');
+                    });              
+                });
+            });/*
+
         </script>
     </head>
 
@@ -123,19 +148,62 @@
         <div class = "step_section">
             <h4>Select a student to view:</h4>    
             <form>
-                <select name="users" onchange="showUser(this.value)">
+                <select name="users">
                 <?php
                     $query = "SELECT Username FROM users";
                     $allUsers = mysqli_query($db,$query);
+                    echo "<option value = '*'> All </option>";
                     while($row = $allUsers->fetch_assoc()){
                         echo "<option value=".$row['Username'].">".$row['Username']."</option>";
                     }
                 ?>
-                </select>    
+                </select>
+                <br><br>
+                <input type = "submit"/>
             </form>
         </div> 
-        <div id = "userInfo">
-            <b>Stuff goes here</b>
-        </div>
+        <?php
+             
+            $score = $_GET['users'];
+            if($score == '*'){
+                $query = "SELECT * FROM users";
+            } else {
+                 $query = "SELECT * FROM users WHERE Username = '$score'";
+            }
+        
+            $result = mysqli_query($db,$query);
+
+            echo "<table class = 'table table-striped table-bordered table-hover table-inverse'>
+                  <thead class = 'thead-inverse'>    
+                    <tr>
+                    <th>Name</th>
+                    <th>Data Score</th>
+                    <th>Condition Score</th>
+                    <th>Loop Score</th>
+                    <th>Collection Score</th>
+                    <th>Methods</th>
+                    <th>OOSection Score</th>
+                    <th>Inheritance Score</th>
+                    <th>Try Catch Score</th>
+                    <th>I/O Score</th>
+                    </tr>
+                </thead>";
+                while($row = mysqli_fetch_array($result)){
+                    echo "<tr>";
+                    echo "<td>" . $row['Username'] . "</td>";
+                    echo "<td>" . $row['Score'] . "</td>";
+                    echo "<td>" . $row['Score2'] . "</td>";
+                    echo "<td>" . $row['Score3'] . "</td>";
+                    echo "<td>" . $row['Score4'] . "</td>";
+                    echo "<td>" . $row['Score5'] . "</td>";
+                    echo "<td>" . $row['Score6'] . "</td>";
+                    echo "<td>" . $row['Score7'] . "</td>";
+                    echo "<td>" . $row['Score8'] . "</td>";
+                    echo "<td>" . $row['Score9'] . "</td>";
+                    echo "</tr>";
+                }
+                echo "</table>";        
+            ?>
+        <br><br>
     </body>
 </html>    

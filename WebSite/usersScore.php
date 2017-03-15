@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
+
 <style>
 table {
     width: 100%;
@@ -14,15 +12,15 @@ table, td, th {
 
 th {text-align: left;}
 </style>
-</head>
 <body>
     <?php
     $db = mysqli_connect('localhost','root','','teachingaidapp') or die('Error connecting to MySql');
-    $score = $_GET['score'];
+    $score = $_GET['users'];
     $query = "SELECT * FROM users WHERE Username = '$score'";
+    $query = "SELECT * FROM users";
     $result = mysqli_query($db,$query);
     
-    
+    /*
     echo "<table>
         <tr>
         <th>Name</th>
@@ -49,8 +47,23 @@ th {text-align: left;}
             echo "<td>" . $row['Score8'] . "</td>";
             echo "<td>" . $row['Score9'] . "</td>";
         }
-        echo "</table>";
+        echo "</table>";*/
+        
+        $data = array();
+        while($row = mysqli_fetch_array($result)){
+            $row_data = array('Username' => $row['Username'],
+                             'Score' => $row['Score'],
+                             'Score2' => $row['Score2'],
+                             'Score3' => $row['Score3'],
+                             'Score4' => $row['Score4'],
+                             'Score5' => $row['Score5'],
+                             'Score6' => $row['Score6'],
+                             'Score7' => $row['Score7'],
+                             'Score8' => $row['Score8'],
+                             'Score9' => $row['Score9']);
+            array_push($data,$row_data);
+        }
+        echo json_encode($data);
         mysqli_close($db);  
         ?>    
 </body>
-</html>
