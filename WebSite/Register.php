@@ -82,6 +82,11 @@
                                   } else {
                                     echo "<a href = '' class = 'not-active'> Welcome guest </a>";
                                   }?></li>
+                        <li><?php error_reporting(0); 
+                            if($_SESSION['logged_in'] == 'jamesparry3'){
+                                    echo "<a href = '' class = ''>"." View Scores" . "</a>";  
+                                  } ?>
+                        </li>
                     </ul>
                 </div>
             </div>    
@@ -91,7 +96,7 @@
     <!--    
     <?php
         //Firstly we create a command to query the database
-        /*
+        
         $query = "SELECT Password FROM users";
         
         //Secondly we check to see if the query would be sucssuful 
@@ -106,8 +111,8 @@
             echo $row['Password'] . '<br/>';
         }
         //To close the connection to the DB
-        //mysqli_close($db);
-        */
+        mysqli_close($db);
+        
     ?> -->   
         
     <h2 class = "main_title">Register!</h2>

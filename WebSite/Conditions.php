@@ -86,6 +86,11 @@
                                   } else {
                                     echo "<a href = '' class = 'not-active'> Welcome guest </a>";
                                   }?></li>
+                        <li><?php error_reporting(0); 
+                            if($_SESSION['logged_in'] == 'jamesparry3'){
+                                    echo "<a href = '' class = ''>"." View Scores" . "</a>";  
+                                  } ?>
+                        </li>
                     </ul>
                 </div>
             </div>    

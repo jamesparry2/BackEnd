@@ -13,9 +13,31 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="../Script Files/bootstrap.min.js"></script>
+        <script>
+        function showUser(user){
+            var xmlhttp;
+            if(user == ""){
+                document.getElementById("userInfo").innerHTML = "Select a valid input";
+                return;
+            }
+
+            if(window.XMLHttpRequest){
+                xmlhttp = new XMLHttpRequest();
+            } else {
+                xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.readyState == 200){
+                    document.getElementById("userInfo").innerHTML = this.responseText;
+                }
+            }
+            xmlhttp.open("GET", "usersScore.php?score="+user, true);
+            xmlhttp.send();
+        }
+        </script>
     </head>
 
-    <body onload = "onLoadUpForScore();" class = "main_section">
+    <body class = "main_section">
         
         <nav class = "navbar navbar-default">
             <div class = "container-fluid">
@@ -95,6 +117,25 @@
         </nav>
         <div id = "title_section">
             <h1 class = "main_title">View Scores</h1>
+        </div>
+        <br/>
+        <br/>
+        <div class = "step_section">
+            <h4>Select a student to view:</h4>    
+            <form>
+                <select name="users" onchange="showUser(this.value)">
+                <?php
+                    $query = "SELECT Username FROM users";
+                    $allUsers = mysqli_query($db,$query);
+                    while($row = $allUsers->fetch_assoc()){
+                        echo "<option value=".$row['Username'].">".$row['Username']."</option>";
+                    }
+                ?>
+                </select>    
+            </form>
+        </div> 
+        <div id = "userInfo">
+            <b>Stuff goes here</b>
         </div>
     </body>
 </html>    
