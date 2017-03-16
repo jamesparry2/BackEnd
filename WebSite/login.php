@@ -89,17 +89,17 @@
                         </ul>
                 </div>    
         </nav>
-    <body class = "main_section">
-        <div class = "">
+    <body onload="extendBack();" class = "main_section">
+        <div class = "col-md-4 col-md-offset-4">
                 <h2 class = "main_title">Login</h2>
-                <form style = "text-align: center;" action ="" method="post">
+                <form class = "form-group" action ="" method="post">
                     <label>Username</label>
-                    <input type="text" name = "username"/>
+                    <input type="text"  class="form-control" placeholder = "Username" name = "username"/>
                     <br/>
                     <label>Password</label>
-                    <input type="password" name ="passwords"/>
+                    <input type="password" class="form-control" placeholder = "Password" name ="passwords"/>
                     <br/>
-                    <button type = "submit">Log In</button>
+                    <button class="btn btn-default" type = "submit">Log In</button>
                 </form>
             <?php
                 error_reporting(0);
@@ -125,11 +125,12 @@
                     } 
                 } else {
                     echo "<br/>";
-                    echo "<p class = 'step_section' style = 'text-align: center;'>Fill out both forms before progressing</p>";
+                    echo "<p class = 'step_section'>Fill out both forms before progressing</p>";
                 }
 
             ?>  
         </div>
         <br><br><br>
+        <p id = "extend"></p>
     </body>
 </html>

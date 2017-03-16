@@ -539,3 +539,8 @@ function singleQuestions(currentQuestion, question){
 }
 
 //------------------------------------------------------------------------
+ function extendBack(){
+     for(var i = 0; i < 30; i++){
+         document.getElementById("extend").innerHTML += "<br>";
+     }
+ }

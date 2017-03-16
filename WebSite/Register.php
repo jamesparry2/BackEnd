@@ -90,7 +90,7 @@
                         </ul>
                 </div>    
         </nav>
-    <body class = "main_section">
+    <body onload = "extendBack();"class = "main_section">
     <!--<h1>PHP Connect to MYSQL</h1>-->
     <!--    
     <?php
@@ -116,15 +116,15 @@
         
     <h2 class = "main_title">Register!</h2>
     <div class = "fillInForm">  
-        <form style = "text-align: center;"method="post" action="">
+        <form class = "col-md-4 col-md-offset-4" method="post" action="">
             <label>Username:</label>
-            <input type ="text" name = "username"/>
+            <input class="form-control" placeholder="Username" type ="text" name = "username"/>
             <br/>
             <label>Password:</label>
-            <input type = "password" name = "password"/>
+            <input class="form-control" placeholder = "Password" type = "password" name = "password"/>
             <br/>
             
-            <input class = "button" type = "submit" value = "Register"/>
+            <input class="btn btn-default" class = "button" type = "submit" value = "Register"/>
         </form>    
         <?php
             error_reporting(0);
@@ -147,6 +147,6 @@
             }
         ?>
     </div>
-    <br><br><br>    
+    <p id = "extend"></p>
     </body>
 </html>
