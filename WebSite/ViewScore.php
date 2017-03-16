@@ -2,77 +2,32 @@
     $db = mysqli_connect('localhost','root','','teachingaidapp') or die('Error connecting to MySql');
     session_start();
 ?>
-
+<!DOCTYPE html>
 <html lang="en" class = "marigns">
     <head>
         <meta charset="UTF-8"/>
         <title>Index Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../Resources/stylesheet.css"/>
         <script src="../Script Files/Questions.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="http://d3js.org/d3.v3.min.js"></script>
         <script src="../Script Files/bootstrap.min.js"></script>
-        <script>
-            /*
-            
-            onchange="showUser(this.value)
-            
-            function showUser(user){
-                var xmlhttp;
-                if(user == ""){
-                    document.getElementById('userInfo').innerHTML = "Select a valid input";
-                    return;
-                }
-
-                if(window.XMLHttpRequest){
-                    xmlhttp = new XMLHttpRequest();
-                } else {
-                    xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
-                }
-                xmlhttp.onreadystatechange = function(){
-                    if(xmlhttp.readyState == 4 && xmlhttp.readyState == 200){
-                        document.getElementById('userInfo').innerHTML = this.responseText;
-                    }
-                };
-                xmlhttp.open('GET', 'usersScore.php?score='+user, true);
-                xmlhttp.send();
-            }
-            
-            $(function(){
-                var url = 'usersScore.php';
-                $.getJSON(url, function(data){
-                    $.each(data, function(index, data){
-                        $('#tbody').append('<tr>');
-                        $('#tbody').append('<td>'+data.Username+'</td>');
-                        $('#tbody').append('<td>'+data.Score+'</td>');
-                        $('#tbody').append('<td>'+data.Score2+'</td>');
-                        $('#tbody').append('<td>'+data.Score3+'</td>');
-                        $('#tbody').append('<td>'+data.Score4+'</td>');
-                        $('#tbody').append('<td>'+data.Score5+'</td>');
-                        $('#tbody').append('<td>'+data.Score6+'</td>');
-                        $('#tbody').append('<td>'+data.Score7+'</td>');
-                        $('#tbody').append('<td>'+data.Score8+'</td>');
-                        $('#tbody').append('<td>'+data.Score9+'</td>');
-                        $('#tbody').append('</tr>');
-                    });              
-                });
-            });/*
-
-        </script>
     </head>
+    
+    
 
     <body class = "main_section">
         
-        <nav class = "navbar navbar-default">
+        <nav class = "navbar navbar-default navbar-collapse">
             <div class = "container-fluid">
                 <div class = "navbar-header">
                     <a class = "navbar-brand">Java Learning Home Page</a>
                 </div>
                 
-                <div class = "collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class = "nav navbar-nav">
-                        <li><a href = "Index.php">Home<span class="sr-only">(current)</span></a></li>
+                        <li><a href = "Index.php">Home</a></li>
                         <li><a href = "Overview.php">Overview</a></li>
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
@@ -109,7 +64,7 @@
                                 <li><a href = "OOSection.php">Section 3.2: Encapsulation </a></li>
                             </ul>    
                         </li>
-                        <li style = "padding-right: 100px;"  class = "dropdown">
+                        <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role = "button" ari-haspopup="true" aria-expanded="false"> Advanced Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
                                 <li><a href = "Inheritance.php">Section 1: Inheritance-Concepts of superclass/sub-class</a></li>
@@ -125,20 +80,22 @@
                                 <li><a href = "Input_Output.php">Section 3.2: Writting in data </a></li>
                             </ul>
                         </li>
-                        <li class = ""><a href = "Register.php">Register!</a></li>
-                        <li class = ""><a href = "login.php">Log In!</a></li>
-                        <li><?php if(isset($_SESSION['logged_in'])){
-                                    echo "<a href = '' class = 'not-active'>" . " Welcome " . $_SESSION['logged_in'] . "</a>";
-                                  } else {
-                                    echo "<a href = '' class = 'not-active'> Welcome guest </a>";
-                                  }?></li>
-                        <li><?php error_reporting(0); 
-                            if($_SESSION['logged_in'] == 'jamesparry3'){
-                                    echo "<li class = 'active'/><a href = '' class = ''>"." View Scores" . "</a>,</li>";  
-                                  } ?></li>
                     </ul>
-                </div>
-            </div>    
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href = "Register.php"><span class = "glyphicon glyphicon-user"></span> Register!</a></li>
+                            <li><a href = "login.php"><span class = "glyphicon glyphicon-log-in"></span> Log In!</a></li>
+                            
+                            <li><?php if(isset($_SESSION['logged_in'])){
+                                        echo "<a href = '' class = 'not-active'>" . " Welcome " . $_SESSION['logged_in'] . "</a>";
+                                      } else {
+                                        echo "<a href = '' class = 'not-active'> Welcome Guest </a>";
+                                      }?></li>
+                            <li><?php error_reporting(0); 
+                                if($_SESSION['logged_in'] == 'jamesparry3'){
+                                        echo "<li class = 'active'><a href = '' class = ''>"." View Scores" . "</a></li>";  
+                                      } ?></li>
+                        </ul>
+                </div>    
         </nav>
         <div id = "title_section">
             <h1 class = "main_title">View Scores</h1>
@@ -159,9 +116,10 @@
                 ?>
                 </select>
                 <br><br>
-                <input type = "submit"/>
+                <input class="btn btn-default" type = "submit" name = "Query"/>
             </form>
         </div> 
+        <br>
         <?php
              
             $score = $_GET['users'];
@@ -173,8 +131,8 @@
         
             $result = mysqli_query($db,$query);
 
-            echo "<table class = 'table table-striped table-bordered table-hover table-inverse'>
-                  <thead class = 'thead-inverse'>    
+            echo "<table class = 'table table-responsive table-striped table-bordered table-hover'>
+                  <thead>    
                     <tr>
                     <th>Name</th>
                     <th>Data Score</th>
@@ -191,15 +149,15 @@
                 while($row = mysqli_fetch_array($result)){
                     echo "<tr>";
                     echo "<td>" . $row['Username'] . "</td>";
-                    echo "<td>" . $row['Score'] . "</td>";
-                    echo "<td>" . $row['Score2'] . "</td>";
-                    echo "<td>" . $row['Score3'] . "</td>";
-                    echo "<td>" . $row['Score4'] . "</td>";
-                    echo "<td>" . $row['Score5'] . "</td>";
-                    echo "<td>" . $row['Score6'] . "</td>";
-                    echo "<td>" . $row['Score7'] . "</td>";
-                    echo "<td>" . $row['Score8'] . "</td>";
-                    echo "<td>" . $row['Score9'] . "</td>";
+                    echo "<td>" . $row['Score'] . "/6</td>";
+                    echo "<td>" . $row['Score2'] . "/6</td>";
+                    echo "<td>" . $row['Score3'] . "/6</td>";
+                    echo "<td>" . $row['Score4'] . "/6</td>";
+                    echo "<td>" . $row['Score5'] . "/6</td>";
+                    echo "<td>" . $row['Score6'] . "/6</td>";
+                    echo "<td>" . $row['Score7'] . "/6</td>";
+                    echo "<td>" . $row['Score8'] . "/6</td>";
+                    echo "<td>" . $row['Score9'] . "/6</td>";
                     echo "</tr>";
                 }
                 echo "</table>";        

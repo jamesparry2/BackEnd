@@ -8,6 +8,7 @@
 <html lang="en" class = "marigns">
     <head>
         <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Index Page</title>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="../Resources/stylesheet.css"/>
@@ -18,21 +19,20 @@
 
     <body class = "main_section">
         
-        <nav class = "navbar navbar-default">
+        <nav class = "navbar navbar-default navbar-collapse">
             <div class = "container-fluid">
                 <div class = "navbar-header">
                     <a class = "navbar-brand">Java Learning Home Page</a>
                 </div>
                 
-                <div class = "collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class = "nav navbar-nav">
-                        <li class = "active"><a href = "Index.php">Home<span class="sr-only">(current)</span></a></li>
+                        <li class = "active"><a href = "Index.php">Home</a></li>
                         <li><a href = "Overview.php">Overview</a></li>
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables and Naming Conventions</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they?</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables</a></li>
                                 <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
                                 <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
@@ -61,9 +61,9 @@
                                 <li><a href = "OOSection.php">Section 3: Object Orientated Paradigm</a></li>
                                 <li><a href = "OOSection.php">Section 3.1: Defining a class and creating constructors</a></li>
                                 <li><a href = "OOSection.php">Section 3.2: Encapsulation </a></li>
-                            </ul>
+                            </ul>    
                         </li>
-                        <li style = "padding-right: 100px;" class = "dropdown">
+                        <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role = "button" ari-haspopup="true" aria-expanded="false"> Advanced Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
                                 <li><a href = "Inheritance.php">Section 1: Inheritance-Concepts of superclass/sub-class</a></li>
@@ -76,19 +76,25 @@
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "Input_Output.php">Section 3: Input/Output </a></li>
                                 <li><a href = "Input_Output.php">Section 3.1: Reading in data </a></li>
-                                <li><a href = "Input_Output.php">Section 3.2: Writting in data </a></li>
+                                <li><a href = "Input_Output.php"> Section 3.2: Writting in data </a></li>
                             </ul>
                         </li>
-                        <li class = ""><a href = "Register.php">Register!</a></li>
-                        <li class = ""><a href = "login.php">Log In!</a></li>
-                        <li><?php if(isset($_SESSION['logged_in'])){
-                                    echo "<a href = '' class = 'not-active'>" . " Welcome " . $_SESSION['logged_in'] . "</a>";
-                                  } else {
-                                    echo "<a href = '' class = 'not-active'> Welcome guest </a>";
-                                  }?></li>
                     </ul>
-                </div>
-            </div>    
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href = "Register.php"><span class = "glyphicon glyphicon-user"></span> Register!</a></li>
+                            <li><a href = "login.php"><span class = "glyphicon glyphicon-log-in"></span> Log In!</a></li>
+                            
+                            <li><?php if(isset($_SESSION['logged_in'])){
+                                        echo "<a href = '' class = 'not-active'>" . " Welcome " . $_SESSION['logged_in'] . "</a>";
+                                      } else {
+                                        echo "<a href = '' class = 'not-active'> Welcome Guest </a>";
+                                      }?></li>
+                            <li><?php error_reporting(0); 
+                                if($_SESSION['logged_in'] == 'jamesparry3'){
+                                        echo "<li class = ''><a href = 'ViewScore.php' class = ''>"." View Scores" . "</a></li>";  
+                                      } ?></li>
+                        </ul>
+                </div>    
         </nav>
         
         <div id = "title_section">
