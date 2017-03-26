@@ -110,7 +110,7 @@
             echo $row['Password'] . '<br/>';
         }
         //To close the connection to the DB
-        mysqli_close($db);
+        //mysqli_close($db);
         
     ?> -->   
         
@@ -146,6 +146,7 @@
 
             }
         ?>
+        
     </div>
     <p id = "extend"></p>
     </body>

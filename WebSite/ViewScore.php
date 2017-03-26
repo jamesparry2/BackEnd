@@ -122,46 +122,105 @@
         <br>
         <?php
              
-            $score = $_GET['users'];
-            if($score == '*'){
+            $userName = $_GET['users'];
+            if($userName == '*'){
                 $query = "SELECT * FROM users";
             } else {
-                 $query = "SELECT * FROM users WHERE Username = '$score'";
+                 $query = "SELECT * FROM users WHERE Username = '$userName'";
             }
         
             $result = mysqli_query($db,$query);
-
-            echo "<table class = 'table table-responsive table-striped table-bordered table-hover'>
-                  <thead>    
-                    <tr>
-                    <th>Name</th>
-                    <th>Data Score</th>
-                    <th>Condition Score</th>
-                    <th>Loop Score</th>
-                    <th>Collection Score</th>
-                    <th>Methods</th>
-                    <th>OOSection Score</th>
-                    <th>Inheritance Score</th>
-                    <th>Try Catch Score</th>
-                    <th>I/O Score</th>
-                    </tr>
-                </thead>";
-                while($row = mysqli_fetch_array($result)){
-                    echo "<tr>";
-                    echo "<td>" . $row['Username'] . "</td>";
-                    echo "<td>" . $row['Score'] . "/6</td>";
-                    echo "<td>" . $row['Score2'] . "/6</td>";
-                    echo "<td>" . $row['Score3'] . "/6</td>";
-                    echo "<td>" . $row['Score4'] . "/6</td>";
-                    echo "<td>" . $row['Score5'] . "/6</td>";
-                    echo "<td>" . $row['Score6'] . "/6</td>";
-                    echo "<td>" . $row['Score7'] . "/6</td>";
-                    echo "<td>" . $row['Score8'] . "/6</td>";
-                    echo "<td>" . $row['Score9'] . "/6</td>";
-                    echo "</tr>";
+            
+            if($userName == '*'){
+                echo "<table class = 'table table-responsive table-striped table-bordered table-hover'>
+                      <thead>    
+                        <tr>
+                        <th>Name</th>
+                        <th>Data Score</th>
+                        <th>Condition Score</th>
+                        <th>Loop Score</th>
+                        <th>Collection Score</th>
+                        <th>Methods</th>
+                        <th>OOSection Score</th>
+                        <th>Inheritance Score</th>
+                        <th>Try Catch Score</th>
+                        <th>I/O Score</th>
+                        </tr>
+                    </thead>";
+                    while($row = mysqli_fetch_array($result)){
+                        echo "<tr>";
+                        echo "<td>" . $row['Username'] . "</td>";
+                        echo "<td>" . $row['Score'] . "/6</td>";
+                        echo "<td>" . $row['Score2'] . "/6</td>";
+                        echo "<td>" . $row['Score3'] . "/6</td>";
+                        echo "<td>" . $row['Score4'] . "/6</td>";
+                        echo "<td>" . $row['Score5'] . "/6</td>";
+                        echo "<td>" . $row['Score6'] . "/6</td>";
+                        echo "<td>" . $row['Score7'] . "/6</td>";
+                        echo "<td>" . $row['Score8'] . "/6</td>";
+                        echo "<td>" . $row['Score9'] . "/6</td>";
+                        echo "</tr>";
+                    }
+                    echo "</table>";   
+            } else {
+                 if($result){
+                    while($row = $row = mysqli_fetch_array($result)){
+                        $dataPoint = array(
+                            array($row['Score']),
+                            array($row['Score2']),
+                            array($row['Score3']),
+                            array($row['Score4']),
+                            array($row['Score5']),
+                            array($row['Score6']),
+                            array($row['Score7']),
+                            array($row['Score8']),
+                            array($row['Score9'])
+                        );
+                        
+                    }
+                
                 }
-                echo "</table>";        
-            ?>
+
+                $jsonData = json_encode($dataPoint);
+                echo $jsonData;
+            }
+        
+        ?>
+        
+        <script>
+            
+            //Width and height
+			var width = 500;
+			var height = 300;
+			var barPadding = 1;
+            var setTickMark = 50;
+			
+            //This allows us to pull the information across from the query
+			var usersScore = <?php echo json_encode($dataPoint); ?>;
+            var barCaculation = width/usersScore.length;  //This formula was on the D3 Website, I did not create this
+			
+			//Create SVG element
+			var svg = d3.select("body")
+						.append("svg")
+						.attr("width", width)
+						.attr("height", height);
+
+			svg.selectAll("rect") //The shape element required for the graph
+			   .data(usersScore)
+			   .enter()
+			   .append("rect")
+			   .attr("x", function(d, i) {
+                    //To get a far X spacing for the chart we get the index of the information and times it by the barCalculation
+			   		return i * barCaculation;
+			   })
+			   .attr("y", function(d) {
+			   		return height - (d * setTickMark);
+			   })
+			   .attr("width", barCaculation - barPadding)
+			   .attr("height", function(d) {
+			   		return d * setTickMark;
+			   })
+        </script>
         <br><br>
     </body>
 </html>    
