@@ -182,28 +182,43 @@
                 }
 
                 $jsonData = json_encode($dataPoint);
-                echo $jsonData;
+                ///echo $jsonData;
             }
         
         ?>
         
         <script>
+            //Tutorial from D3 Tricks and Tips and DashingD3js
+            //Width and height   
+            //Using margins helps place the bar chart without there being any cuttoff, so the axis get
+            //calulated the the cut of width/heights but when
+            var margin = {top:30, right:30, bottom: 10, left: 40}
+			var width = 550 - margin.left - margin.right;
+			var height = 370 - margin.top - margin.bottom;
             
-            //Width and height
-			var width = 500;
-			var height = 300;
 			var barPadding = 1;
             var setTickMark = 50;
 			
             //This allows us to pull the information across from the query
 			var usersScore = <?php echo json_encode($dataPoint); ?>;
             var barCaculation = width/usersScore.length;  //This formula was on the D3 Website, I did not create this
+            
+            var axisScaler = d3.scale.linear()
+                                .domain([0,9])
+                                .range([0,width]);
+            
+            var yAxisScale = d3.scale.linear()
+                                .domain([6,0])
+                                .range([0, height]);
 			
 			//Create SVG element
+            //So here when defining the SVG element we add those reductions back to get the full W/H again
 			var svg = d3.select("body")
 						.append("svg")
-						.attr("width", width)
-						.attr("height", height);
+						.attr("width", width + margin.left + margin.right)
+						.attr("height", height + margin.bottom + margin.top)
+                        .append("g")
+                        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 			svg.selectAll("rect") //The shape element required for the graph
 			   .data(usersScore)
@@ -211,15 +226,38 @@
 			   .append("rect")
 			   .attr("x", function(d, i) {
                     //To get a far X spacing for the chart we get the index of the information and times it by the barCalculation
-			   		return i * barCaculation;
+                
+			   		return i * barCaculation + 10;
 			   })
 			   .attr("y", function(d) {
-			   		return height - (d * setTickMark);
+			   		return height - (d * setTickMark + 10);
 			   })
 			   .attr("width", barCaculation - barPadding)
 			   .attr("height", function(d) {
 			   		return d * setTickMark;
 			   })
+            
+            //All the Axies stuff
+            var xAxies = d3.svg.axis()
+                            .scale(axisScaler)
+                            .orient("bottom");
+            
+            var yAxies = d3.svg.axis()
+                            .scale(yAxisScale)
+                            .orient("left")
+                            .ticks(6);
+                            
+            
+            var xAxisGroup = svg.append("g")
+                                .attr("transform", "translate(10," + (height - 10) + ")")
+                                .call(xAxies);
+            
+            var yAxisGroup = svg.append("g")
+                                .attr("transform", "translate(" + 15 + ",15)")
+                                .call(yAxies);
+            
+            typeof(xAxies);
+            
         </script>
         <br><br>
     </body>
