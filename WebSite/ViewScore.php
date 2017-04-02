@@ -242,6 +242,30 @@
 			   .attr("height", function(d) {
 			   		return d * setTickMark;
 			   })
+			   .attr("fill", "blue");
+			
+			//Using D3 Tutorials to aid in completeing text and colour change to improve the
+			//Data Visual
+			
+			svg.selectAll("text")
+				.data(usersScore)
+				.enter()
+				.append("text")
+				.text(function(d){
+				if(d == 0){
+					return;
+				} else {
+					return d;	
+				}})
+				.attr("text-anchor", "middle")
+				.attr("fill", "white")
+				.attr("x", function(d, i) {
+                    //To get a far X spacing for the chart we get the index of the information and times it by the barCalculation
+			   		return i * barCaculation + 35;
+			   })
+			   .attr("y", function(d) {
+			   		return height - (d * setTickMark - 10);
+			   });
             
             //All the Axies stuff
             var xAxies = d3.svg.axis()
@@ -261,9 +285,7 @@
             var yAxisGroup = svg.append("g")
                                 .attr("transform", "translate(" + 15 + ",15)")
                                 .call(yAxies);
-            
-            typeof(xAxies);
-            
+           
         </script>
         <br><br>
     </body>

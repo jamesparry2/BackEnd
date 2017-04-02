@@ -172,7 +172,7 @@
                     $userName = $_SESSION['logged_in'];
                     $newScore = $_GET['scoreForSession'];
                     
-                    $updateScoreQuery = "UPDATE users SET Score9='$newScore' WHERE Username = '$userName'";
+                    $updateScoreQuery = "UPDATE users SET Score3='$newScore' WHERE Username = '$userName'";
                     if(mysqli_query($db, $updateScoreQuery)){
                         echo "Updated done";
                     } else {
