@@ -409,7 +409,7 @@ function DisplayQuestion(pageType){
     history.pushState({}, null, "?scoreForSession=" + score);
     
     if(score <= 6){
-        var output = Math.floor(Math.random() * 2);
+        var output = 0;
         if(output == 0){
             MultiQuest(multiChoiceQuestions, multiChoices, multiAnswers, pageType2);
         } else {
@@ -421,6 +421,98 @@ function DisplayQuestion(pageType){
         document.getElementById('button').innerHTML = '<p></p>';
     }
 }
+
+function DisplayQuestion2(pageType, output){
+    var multiChoiceQuestions;
+    var multiChoices;
+    var multiAnswers;
+    var singleQuestions;
+    var singleAnsers;
+    
+    switch(pageType){
+        case 'loopPage':
+            multiChoiceQuestions = forMultiQuestion;
+            multiChoices = forMultiChoice;
+            multiAnswers = forMultiAnswer;
+            singleQuestions = forSingeQuestion;
+            singleAnsers = forSingleAnswer;
+            break;
+        case 'conditions': 
+            multiChoiceQuestions = conditionMultiQuestion;
+            multiChoices = conditionMultiChoice;
+            multiAnswers = conditionMultiAnswer;
+            singleQuestions = conditionSingle;
+            singleAnsers = conditionAnswer;
+            break;
+        case 'dataFundementals':
+            multiChoiceQuestions = multiDataFundementals;
+            multiChoices = multiDataChoice;
+            multiAnswers = multiDataAnswer;
+            singleQuestions = singleDataFun;
+            singleAnsers = singleDataAnswer;
+            break;
+        case 'collections':
+            multiChoiceQuestions = multiCollectionQuestion;
+            multiChoices = multiCollectionChoice;
+            multiAnswers = multiCollectionAnswer;
+            singleQuestions = singleCollectionQuestion;
+            singleAnsers = singleCollectionAnswer;
+            break;
+        case 'methods':
+            multiChoiceQuestions = multiMethodQuestion;
+            multiChoices = multiMethodChoice;
+            multiAnswers = multiMethodAnswer;
+            singleQuestions = singleMethodQuestion;
+            singleAnsers = singleMethodAnswer;
+            break;
+        case 'ooSection':
+            multiChoiceQuestions = multiOOSectionQuestion;
+            multiChoices = multiOOSectionChoices;
+            multiAnswers = multiOOSectionAnswers;
+            singleQuestions = singleOOSectionQuestions;
+            singleAnsers = singleOOSectionAnswers;
+            break;
+        case 'inheritance':
+            multiChoiceQuestions = multiInheritanceQuestions;
+            multiChoices = multiInheritanceChoice;
+            multiAnswers = multiInheritanceAnswer;
+            singleQuestions = singleInheritanceQuestions;
+            singleAnsers = singleInheritanceAnswers;
+            break;
+        case 'tryCatch':
+            multiChoiceQuestions = multiTryCatchQuestions;
+            multiChoices = multiTryCatchChoices;
+            multiAnswers = multiTryCatchAnswers;
+            singleQuestions = singleTryCatchQuestions;
+            singleAnsers = singleTryCatchAnswers;
+            break;
+        case 'inputOutput':
+            multiChoiceQuestions = multiInputOutputQuestions;
+            multiChoices = multiInputOutputChoices;
+            multiAnswers = multiInputOutputAnswers;
+            singleQuestions = singleInputOutputQuestion;
+            singleAnsers = singleInputOutputAnswer;
+            break;
+    }
+    
+    var pageType2 = pageType;
+    history.pushState({}, null, "?scoreForSession=" + score);
+    
+    if(score <= 6){
+        //var output = Math.floor(Math.random() * 2);
+        if(output == 0){
+            MultiQuest(multiChoiceQuestions, multiChoices, multiAnswers, pageType2);
+        } else {
+            SingleQuestion(singleQuestions, singleAnsers, pageType2);
+        }
+    } else {
+        document.getElementById('question').innerHTML = '<p id = "Q1">Section completed<p>';
+        document.getElementById('answers').innerHTML = '<p><p>';
+        document.getElementById('button').innerHTML = '<p></p>';
+    }
+}
+
+
 
 var questionArray = [];
 var answerArray = [];
@@ -479,7 +571,7 @@ function MultiAnswer(){
     }
     i = 0;
     history.pushState({}, null, "?scoreForSession=" + score);
-    DisplayQuestion(pageType1);
+    DisplayQuestion2(pageType1, Math.floor(Math.random() * 2));
 }
 
 function multiQuestions(currentQuestion, whichArray){
@@ -524,7 +616,7 @@ function inputAnswers(question, answer){
         score = 0;
     }
     history.pushState({}, null, "?scoreForSession=" + score);
-    DisplayQuestion(pageType1);
+	DisplayQuestion2(pageType1, Math.floor(Math.random() * 2));
 }
 
 function singleQuestions(currentQuestion, question){
