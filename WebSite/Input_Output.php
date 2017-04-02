@@ -129,7 +129,7 @@
         <img src = "../Resources/WriteExample.png" alt = "Write File Example"/>
     </div>
     <br/>
-    <br/>inputOutput
+    <br/>
     <div class = "step_section">
         <h3 class="install_tags"> Video Segment </h3>
         <br/>

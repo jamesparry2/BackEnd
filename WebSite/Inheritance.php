@@ -52,7 +52,7 @@
                                 <li role = "separtor" class = "divider"></li>
                                 <li><a href = "Methods.php">Section 2: Methods</a></li>
                                 <li><a href = "Methods.php">Section 2.1: Defining Methods and return types</a></li>
-                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recurssion </a></li>
+                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recursion </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "OOSection.php">Section 3: Object Orientated Paradigm</a></li>
                                 <li><a href = "OOSection.php">Section 3.1: Defining a class and creating constructors</a></li>
@@ -98,14 +98,14 @@
     <br/>
     <br/>
     <div class = "step_section">
-        <h3 class = "install_tags">Section 1: Concepts of superclass/sub-class</h3>
+        <h3 class = "install_tags">Section 1: Concepts of Superclass/Sub-class</h3>
         <br/>
         <br/>
         <p>Inheritance is a concept on Object-Orientation design. It shows a relationship between more general classes to more specialized classes. This get can be seen in a "is-a" relationship.
          So for example every car IS A a vehicle where a car shares common traits of all vehicles. In this example we would say the Car class would inherit from the Vehicle class. </p>
         <h4>Superclass:</h4>
-        <p>A super class is the more genral version of a class, so returning the Car/Vehicle example in that case the Vehicle would be the super class as it would contain more general data types
-        and methods that Car class will inherit. So for the IS A relationship if the class is on the right hand side of the relationship it must be a superclass, the more general class.</p>
+        <p>A super class is the more genral version of a class, so returning to the Car/Vehicle example in that case the Vehicle would be the super class as it would contain more general data types
+        and methods that the Car class will inherit. So for the IS A relationship if the class is on the right hand side of the relationship it must be a superclass, the more general class.</p>
         <h4>Sub-Class:</h4>
         <p>A sub-class is used when you want to create a more specfic version of a superclass yet you want to have access to all the variables and public methods without having to rewrite them.You can 
         then in the subclass add more behaviours or edit the implementation of inherited methods if needed. When change a method implementation you override it. To inherite a class we use the keyword "extends"
@@ -133,7 +133,7 @@
         <br/>
         <br/>
         <h4>Polymorphism:</h4>
-        <p>Polymorphism is the ability of an object to take manyt forms. If a object has multiple IS-A relationships it can be considered polymorphic. So for example Vehicle will have many subclasses such as
+        <p>Polymorphism is the ability of an object to take many forms. If a object has multiple IS-A relationships it can be considered polymorphic. So for example Vehicle will have many subclasses such as
         Car, Bike, Truck. Due to muleiple IS-A relationships this makes Vehicle polymorphic. If we were to create a Vehicle Object it could be come a refernce variable allowing it to be reasing to other objects.Note
         that a reference variable is non-mutable. </p>
         <h4>Example: </h4>
