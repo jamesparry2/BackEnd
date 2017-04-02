@@ -79,7 +79,7 @@
                             <li><a href = "login.php"><span class = "glyphicon glyphicon-log-in"></span> Log In!</a></li>
                             
                             <li><?php if(isset($_SESSION['logged_in'])){
-                                        echo "<a href = '' class = 'not-active'>" . " Welcome " . $_SESSION['logged_in'] . "</a>";
+                                        echo "<a href = 'Logout.php' class = ''>" . " Welcome " . $_SESSION['logged_in'] . "</a>";
                                       } else {
                                         echo "<a href = '' class = 'not-active'> Welcome Guest </a>";
                                       }?></li>

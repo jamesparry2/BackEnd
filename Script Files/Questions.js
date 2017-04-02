@@ -14,8 +14,8 @@ forMultiChoice[2] = ["When you want to know how many iterations are left",
              "When you do not know how many iteration there are",
              "When you know how many iterations there are"];
 forMultiChoice[3] = ["(intalize: check: count)",
-             "(check, count, intalize)",
-             "(count, intalize, check)"];
+             "(check: count: intalize)",
+             "(count: intalize: check)"];
     
 var forMultiAnswer = [];
 forMultiAnswer[0] = ["The Do loop"];
@@ -27,13 +27,13 @@ forMultiAnswer[3] = ["(intalize: check: count)"];
 //The Arrays Required the input questions to function
 
 var forSingeQuestion = [];
-forSingeQuestion [0] = ["What are for loops commonly known as?"];
-forSingeQuestion [1] = ["The statements that make up the block of code in the loops are known as?"];
-forSingeQuestion [2] = ["Are all the statements excuted together or independently in the for loop?"];
-forSingeQuestion [3] = ["Name the example given in this page where loops can be useful."];
+forSingeQuestion [0]=["What are for loops commonly known as?"];
+forSingeQuestion [1]=["The statements that make up the block of code in the loops are known as?"];
+forSingeQuestion [2]=["Are all the statements excuted together or independently in the for loop?"];
+forSingeQuestion [3]=["Name the example given in this page where loops can be useful."];
 
 var forSingleAnswer = [];
-forSingleAnswer [0] = ["Count-Cotrolled"];
+forSingleAnswer [0] = ["Count-Controlled"];
 forSingleAnswer [1] = ["Body"];
 forSingleAnswer [2] = ["Independently"];
 forSingleAnswer [3] = ["Calculations"];
@@ -42,7 +42,7 @@ forSingleAnswer [3] = ["Calculations"];
 //----------------------------------------------------------------------------------------------------------------------
 
 var conditionMultiQuestion = [];
-conditionMultiQuestion[0] = ["Can an if statement has multiple conditions?"];
+conditionMultiQuestion[0] = ["Can an if statement have multiple conditions?"];
 conditionMultiQuestion[1] = ["Which following code segments is the correct syntax?"];
 conditionMultiQuestion[2] = ["Is it bad practice to have nested if statements?"];
 conditionMultiQuestion[3] = ["Does using nested if statements add an extra level of complexity?"];
@@ -66,7 +66,7 @@ var conditionSingle = [];
 conditionSingle [0] = ["What is the sytanx for the Negation operator?"];
 conditionSingle [1] = ["What is the syntax for the And operator?"];
 conditionSingle [2] = ["What is the syntax for the Or operation?"];
-conditionSingle [3] = ["When we want to check an inverse of a boolean variable, what operator would we commonly use?"];
+conditionSingle [3] = ["When we want to divide in a math expression what would we use?"];
 
 var conditionAnswer = [];
 conditionAnswer [0] = ["!"];
@@ -100,10 +100,10 @@ multiDataAnswer [3] = ["4"];
 //----------------------------------------------------------------------------------------------------------------
 
 var singleDataFun = [];
-singleDataFun [0] = ["How would you declare a immutable final max_cap using correct conventions for Java?"];
+singleDataFun [0] = ["How would you declare a immutable final MAX_CAP using correct conventions for Java?"];
 singleDataFun [1] = ["What is the line to import the scanner in Java?"];
 singleDataFun [2] = ["How would you create a Scanner object in Java?"];
-singleDataFun [3] = ["H-ow would you take in a input and store it in a variable called input?"];
+singleDataFun [3] = ["How would you take in a input and store it in a variable called input?"];
 
 var singleDataAnswer = [];
 singleDataAnswer [0] = ["final double MAX_CAP"];
@@ -116,7 +116,7 @@ singleDataAnswer [3] = ["int input = in.nextInt()"];
 
 var multiCollectionQuestion = [];
 multiCollectionQuestion [0] = ["Which one of the following is an incorrect difference between Arrays and ArrayLists"];
-multiCollectionQuestion [1] = ["Out of the ones named in the first paragraph, which data set has not been said(Arrays, List and ArrayLists)"];
+multiCollectionQuestion [1] = ["Out of the ones named in the first paragraph which data set has not been said(Arrays: List: ArrayLists)"];
 multiCollectionQuestion [2] = ["Is Dequeu part of the Collection Framework?"];
 multiCollectionQuestion [3] = ["Which following function allows you to add to an Array?"];
 
@@ -124,24 +124,22 @@ var multiCollectionChoice = [];
 multiCollectionChoice [0] = ["Arrays are static and ArrayLists are Dynamic",
                              "ArayLists can be multi-demensional while Arrays can not",
                              "Arrays performance is better than ArrayLists"];
-multiCollectionChoice [1] = ["Collection",
-                             "Queue",
-                             "Iterator"];
+multiCollectionChoice [1] = ["Collection","Queue","Iterator"];
 multiCollectionChoice [2] = ["Yes", "No", "Unsure"];
-multiCollectionChoice [3] = ["add()", "Add()", "add(Object o)"];
+multiCollectionChoice [3] = ["add()", "Add()", "add(Object O)"];
 
 var multiCollectionAnswer = [];
 multiCollectionAnswer [0] = ["ArayLists can be multi-demensional while Arrays can not"];
 multiCollectionAnswer [1] = ["Queue"];
 multiCollectionAnswer [2] = ["Yes"];
-multiCollectionAnswer [3] = ["add(Object o)"];
+multiCollectionAnswer [3] = ["add(Object O)"];
 
 //----------------------------------------------------------------------------------------------------------------
 
 var singleCollectionQuestion = [];
 singleCollectionQuestion [0] = ["What does the collection framework consit of?"];
 singleCollectionQuestion [1] = ["Which import is the collection framework stored in?"];
-singleCollectionQuestion [2] = ["If you want to access a 2D Array, how many for loops would you need?"];
+singleCollectionQuestion [2] = ["If you want to access a 2D Array how many for loops would you need?"];
 singleCollectionQuestion [3] = ["What does API stand for?"];
 
 var singleCollectionAnswer = [];
@@ -155,7 +153,7 @@ singleCollectionAnswer [3] = ["Application Program Interface"];
 
 var multiMethodQuestion = [];
 multiMethodQuestion [0] = ["How many input parameters does Math.pow have from what you have been shown?"];
-multiMethodQuestion [1] = ["What doe methods allow us to do?"];
+multiMethodQuestion [1] = ["What does methods allow us to do?"];
 multiMethodQuestion [2] = ["What does the method signature state?"];
 multiMethodQuestion [3] = ["The block of code in the method is called?"];
 
@@ -227,7 +225,7 @@ var multiInheritanceQuestions = [];
 multiInheritanceQuestions [0] = ["What is the relationship called between classes?"];
 multiInheritanceQuestions [1] = ["What is a super class?"];
 multiInheritanceQuestions [2] = ["What is a sub class?"];
-multiInheritanceQuestions [3] = ["If you change the implementation of a method in the subclass, what is it?"];
+multiInheritanceQuestions [3] = ["If you change the implementation of a method in the subclass what is it?"];
 
 var multiInheritanceChoice = [];
 multiInheritanceChoice [0] = ["IS-A", "A-IS", "AS-A"];
@@ -263,7 +261,7 @@ var multiTryCatchQuestions = [];
 multiTryCatchQuestions [0] = ["How many aspects of errors in programming are there?"];
 multiTryCatchQuestions [1] = ["What error does an Array being overfilled cause?"];
 multiTryCatchQuestions [2] = ["How many error types are there?"];
-multiTryCatchQuestions [3] = ["If you need to execute a block of code, even when you the try/catch executes, what's it keyword required?"];
+multiTryCatchQuestions [3] = ["If you need to execute a block of code: even when you the try/catch executes : what's it keyword required?"];
 
 var multiTryCatchChoices = [];
 multiTryCatchChoices [0] = ["1","2","3"];
@@ -282,8 +280,8 @@ multiTryCatchAnswers [3] = ["finally"];
 var singleTryCatchQuestions = [];
 singleTryCatchQuestions [0] = ["Add a throw statement to the main method(Add exception after it)"];
 singleTryCatchQuestions [1] = ["What is the exception used for Arithmetic errors?"];
-singleTryCatchQuestions [2] = ["If an exception represent a recovarable part in the program, what kind of error is it?"];
-singleTryCatchQuestions [3] = ["If an exception represent a logical error in the program, what kind of error is it?"];
+singleTryCatchQuestions [2] = ["If an exception represent a recovarable part in the program: what kind of error is it?"];
+singleTryCatchQuestions [3] = ["If an exception represent a logical error in the program: what kind of error is it?"];
 
 var singleTryCatchAnswers = [];
 singleTryCatchAnswers [0] = ["public static void main(String [] args) throw exception"];
@@ -410,7 +408,7 @@ function DisplayQuestion(pageType){
     var pageType2 = pageType;
     history.pushState({}, null, "?scoreForSession=" + score);
     
-    if(score < 6){
+    if(score <= 6){
         var output = Math.floor(Math.random() * 2);
         if(output == 0){
             MultiQuest(multiChoiceQuestions, multiChoices, multiAnswers, pageType2);
@@ -418,7 +416,7 @@ function DisplayQuestion(pageType){
             SingleQuestion(singleQuestions, singleAnsers, pageType2);
         }
     } else {
-        document.getElementById('question').innerHTML = '<p id = "Q1">Section completed<p><br>';
+        document.getElementById('question').innerHTML = '<p id = "Q1">Section completed<p>';
         document.getElementById('answers').innerHTML = '<p><p>';
         document.getElementById('button').innerHTML = '<p></p>';
     }
@@ -448,11 +446,11 @@ function MultiQuest(questions, choices, answer, pageType){
     document.getElementById('question').innerHTML = '<p id = "Q1">' + questions[output] + '<p><br>';
         
     for(var k = 0;k < choices[output].length; k++ ){
-        choicesOut.push('<p><input id = "choice'+[k]+'" type = "radio" name = "option" value="'+choices[output][k]+'">' + choices[output][k] + '<p>');    
+        choicesOut.push('<p><input  id = "choice'+[k]+'" type = "radio" name = "option" value="'+choices[output][k]+'">' + choices[output][k] + '<p>');    
     }
     document.getElementById('answers').innerHTML = choicesOut.join("");
-    document.getElementById('button').innerHTML = '<p><button onClick = "MultiAnswer();">Submit</button></p>';
-    document.getElementById('score').innerHTML = '<p id = "new">' + score + '<p>';
+    document.getElementById('button').innerHTML = '<p><button class = "btn btn-primary" onClick = "MultiAnswer();">Submit</button></p>';
+    document.getElementById('score').innerHTML = '<p id = "new"> Current Score: ' + score + '<p>';
     history.pushState({}, null, "?scoreForSession=" + score);
     
 }
@@ -505,8 +503,8 @@ function SingleQuestion(question, answer, pageType){
     
     document.getElementById('question').innerHTML = '<p id = "Q1">' + question[output] + '<p><br>';    
     document.getElementById('answers').innerHTML = '<input id = "answerPoint" type="text" value="">';
-    document.getElementById('button').innerHTML = '<p><button onClick = "inputAnswers();">Submit</button></p>';
-    document.getElementById('score').innerHTML = '<p id = "new">' + score + '<p>';
+    document.getElementById('button').innerHTML = '<p><button class = "btn btn-primary" onClick = "inputAnswers();">Submit</button></p>';
+    document.getElementById('score').innerHTML = '<p id = "new"> Current Score: ' + score + '<p>';
     history.pushState({}, null, "?scoreForSession=" + score);
 }
 

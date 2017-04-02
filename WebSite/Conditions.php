@@ -84,7 +84,7 @@
                             <li><a href = "login.php"><span class = "glyphicon glyphicon-log-in"></span> Log In!</a></li>
                             
                             <li><?php if(isset($_SESSION['logged_in'])){
-                                        echo "<a href = '' class = 'not-active'>" . " Welcome " . $_SESSION['logged_in'] . "</a>";
+                                        echo "<a href = 'Logout.php' class = ''>" . " Welcome " . $_SESSION['logged_in'] . "</a>";
                                       } else {
                                         echo "<a href = '' class = 'not-active'> Welcome Guest </a>";
                                       }?></li>
@@ -245,49 +245,47 @@
         <br/>
         <br/>
         <div class = "step_section">
-            <h3 class = "install_tags">Question Segment</h3>
-            <br/>
-            <br/>
-            <?php
+            <div>
+				<h3 class="install_tags"> Question Segment </h3>	
+                <br/>
+				<br/>
+				<?php
                 if(empty($_GET['scoreForSession'])){
-            ?>
-                <div id = "question_section">
-                <p><button onClick = "DisplayQuestion('conditions')">Question Time!</button></p>
-                <form style = "text-align: center;" action ="" method="post">    
+                ?>
+                <p><button class = "btn btn-primary" onClick = "DisplayQuestion('conditions')">Question Time!</button></p>
+                <form class = "form-group" action ="" method="post">    
                     <p id = "question"></p>
                     <p id = "answers"></p>
+					<p id = "score"></p>
                     <p id = "button"></p>
-                    <p id = "score"></p>
-                    <input type="submit" value="Check"/>                
+                    <input class = "btn btn-danger"type="submit" value="Update Highscore"/>                
                 </form>           
-                </div>
-            <?php
+                <?php
                 } else {
-            ?>
-                <div id = "question_section">
-                <p><button onClick = "DisplayQuestion('conditions')">Question Time!</button></p>
-                <form style = "text-align: center;" action ="" method="post">    
+                ?>
+                <p><button class = "btn btn-primary" onClick = "DisplayQuestion('conditions')">Question Time!</button></p>
+                <form class = "form-group" action ="" method="post">    
                     <p id = "question"></p>
                     <p id = "answers"></p>
+					<p id = "score"></p>
                     <p id = "button"></p>
-                    <p id = "score"></p>
-                    <input type="submit" value="Check"/>                
+                    <input class = "btn btn-danger" type="submit" value="Update Highscore"/>                
                 </form>
-                </div>
-            <?php
+                <?php
                     //This is where the update the score will be going
                     $userName = $_SESSION['logged_in'];
                     $newScore = $_GET['scoreForSession'];
                     
-                    $updateScoreQuery = "UPDATE users SET Score2='$newScore' WHERE Username = '$userName'";
+                    $updateScoreQuery = "UPDATE users SET Score9='$newScore' WHERE Username = '$userName'";
                     if(mysqli_query($db, $updateScoreQuery)){
                         echo "Updated done";
                     } else {
                         echo "Not done" . mysqli_query($db);
                     }
                 }
-            ?>                    
-        </div>
+                ?>
+            </div>
+    	</div>
         <br/>
         <br/>
     </body>

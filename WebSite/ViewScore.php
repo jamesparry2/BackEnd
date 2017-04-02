@@ -32,10 +32,10 @@
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li class = "active"><a href = ""> Section 1 Data Fundemental: What are they?</a></li>
-                                <li class = "active"><a href = ""> Section 1.1 Data Fundemental: Variables</a></li>
-                                <li class = "active"><a href = ""> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
-                                <li class = "active"><a href = ""> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they?</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "Conditions.php"> Section 2: Conditions</a></li>
                                 <li><a href = "Conditions.php"> Section 2.1: If statement/Nested Statements </a></li>
@@ -86,7 +86,7 @@
                             <li><a href = "login.php"><span class = "glyphicon glyphicon-log-in"></span> Log In!</a></li>
                             
                             <li><?php if(isset($_SESSION['logged_in'])){
-                                        echo "<a href = '' class = 'not-active'>" . " Welcome " . $_SESSION['logged_in'] . "</a>";
+                                        echo "<a href = 'Logout.php' class = ''>" . " Welcome " . $_SESSION['logged_in'] . "</a>";
                                       } else {
                                         echo "<a href = '' class = 'not-active'> Welcome Guest </a>";
                                       }?></li>
@@ -105,6 +105,8 @@
         <div class = "step_section">
             <h4>Select a student to view:</h4>    
             <form>
+                <!-- Query to select a User from the database and display their scores, either
+                in a table format for all users or in a D3 representation graph -->
                 <select name="users">
                 <?php
                     $query = "SELECT Username FROM users";
@@ -121,7 +123,11 @@
         </div> 
         <br>
         <?php
-             
+            /*
+            * Using the Get Array function in PHP to pull the selected field from option and use it to create
+            * a SQL Query which get's passed into mysqli_query(database, query) and then depending on the input
+            * will display a Unique output
+            */
             $userName = $_GET['users'];
             if($userName == '*'){
                 $query = "SELECT * FROM users";
