@@ -30,10 +30,10 @@
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they?</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundamental: What are they?</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundamental: Variables</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundamental: Arthemtic Operators</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundamental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li class = "active"><a href = ""> Section 2: Conditions</a></li>
                                 <li class = "active"><a href = ""> Section 2.1: If statement/Nested Statements </a></li>
@@ -55,7 +55,7 @@
                                 <li role = "separtor" class = "divider"></li>
                                 <li><a href = "Methods.php">Section 2: Methods</a></li>
                                 <li><a href = "Methods.php">Section 2.1: Defining Methods and return types</a></li>
-                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recurssion </a></li>
+                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recursion </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "OOSection.php">Section 3: Object Orientated Paradigm</a></li>
                                 <li><a href = "OOSection.php">Section 3.1: Defining a class and creating constructors</a></li>
@@ -101,7 +101,7 @@
         <br/>
         <br/>
         <div class = "step_section">
-            <h3 class = "install_tags">Section 1: Conditions</h3>
+            <h3 class = "install_tags">Section 2: Conditions</h3>
             <br/>
             <br/>
             <p>Conditions in programming are used to determine the flow of a program. There are multiple ways to determine a decision in programming. Some of the ways these can be If statements 
@@ -118,7 +118,7 @@
             <br/>
             <h4>If Statement:</h4>
             <p>An if statement is a form of decision making syntax that is used in high-level programming. Working from the top branch, it works through every possible condition until one is true then exits. Due to this
-            behaviour the order of conditions is important normally having very specfic conditions higher up the tree and slowly generalising downwards. The flow of an if statement is important. An example of
+            behaviour the order of conditions is important. Yu normally having very specfic conditions higher up the tree and slowly generalising downwards. The flow of an if statement is important. An example of
             the flow can be seen below</p>
             <br/>
             <br/>
@@ -199,7 +199,7 @@
             <h4>Nested If Statements:</h4>
             <p> A nested If statement is exactly what it sounds like, multiple conditional expression nessted within each other. This can be very useful
             when you need to make sure multiple facts are true before exiting and output a certain output. However a drawback is that nesting conditional expression 
-            adds an extra level of complexity for every nest you push in. An example of a nested expresion can be seen below:</p>
+            adds an extra level of complexity for every nest you push in. An example of a nested expression can be seen below:</p>
             <img src = "../Resources/NestedIf.png" alt = "Example of Nested Conditions"/>
         </div>
         <br/>
@@ -209,8 +209,8 @@
             <br/>
             <br/>
             <p>If else statements are a slightly more advanced way of asking for multiple condition in a single decision. However logic/runtime errors can occur. A common error
-            that programmers do not consider the order of the conditions. As stated earlier you should always aim to put very specfic conditions at the top and place more generalised
-            conditions in the branch. Examples of poorly designed and good designs can be seen below:</p>
+            that programmers do not consider is the order of the conditions. As stated earlier you should always aim to put very specfic conditions at the top and place more generalised
+            conditions in the branch. Examples of a poorly designed and a good design can be seen below:</p>
             <img src = "../Resources/BadIf.png" alt = "Example of Nested Conditions"/>
         </div>
         <br/>
@@ -228,7 +228,7 @@
             <br/>
             <h4>Or Operator:</h4>
             <p>The Or Operator is used to determine if one of the properities is true, if it is true then the output is true. The only time the Or Operator returns
-            false is when properties are false.</p>
+            false is when all properties are false.</p>
             <br/>
             <h4>Negation Operator:</h4>
             <p>The negation operator invesrse the current boolean value, so for example if A = True then !A = False. The Negation Operator is useful when trying to
@@ -237,7 +237,7 @@
         <br/>
         <br/>
         <div class = "step_section">
-            <h3 class="install_tags"> Video Segment </h3>conditions
+            <h3 class="install_tags"> Video Segment </h3>
             <br>
             <br>
             <iframe class = "videoTutorial" src="https://www.youtube.com/embed/H8jJoqrq0ko" frameborder="0" allowfullscreen></iframe>  

@@ -30,10 +30,10 @@
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li class = "active"><a href = ""> Section 1 Data Fundemental: What are they?</a></li>
-                                <li class = "active"><a href = ""> Section 1.1 Data Fundemental: Variables</a></li>
-                                <li class = "active"><a href = ""> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
-                                <li class = "active"><a href = ""> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
+                                <li class = "active"><a href = ""> Section 1 Data Fundamental: What are they?</a></li>
+                                <li class = "active"><a href = ""> Section 1.1 Data Fundamental: Variables</a></li>
+                                <li class = "active"><a href = ""> Section 1.2 Data Fundamental: Arthemtic Operators</a></li>
+                                <li class = "active"><a href = ""> Section 1.3 Data Fundamental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "Conditions.php"> Section 2: Conditions</a></li>
                                 <li><a href = "Conditions.php"> Section 2.1: If statement/Nested Statements </a></li>
@@ -55,7 +55,7 @@
                                 <li role = "separtor" class = "divider"></li>
                                 <li><a href = "Methods.php">Section 2: Methods</a></li>
                                 <li><a href = "Methods.php">Section 2.1: Defining Methods and return types</a></li>
-                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recurssion </a></li>
+                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recursion </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "OOSection.php">Section 3: Object Orientated Paradigm</a></li>
                                 <li><a href = "OOSection.php">Section 3.1: Defining a class and creating constructors</a></li>
@@ -96,7 +96,7 @@
                 </div>    
         </nav>
         <div id = "title_section">
-            <h1 class = "main_title">Data Fundementals</h1>
+            <h1 class = "main_title">Data Fundamentals</h1>
         </div>
         <br/>
         <br/>
@@ -115,8 +115,8 @@
             <br/>
             <br/>
             <h4>Variable Declration:</h4>
-            <p>As we can see in the above image we have declared 3 variables, but what does the syntax for the declrartion mean?. Well it can be broken up into three parts.
-            These 3 parts would be: Data Type, Name, Intialzation where Data Type = int, Name = apples and Intialzation = 5. We must always end the decleration of a variable with
+            <p>As we can see in the above image we have declared 3 variables, but what does the syntax for the decleration mean?. Well it can be broken up into three parts.
+            These 3 parts would be: Data Type, Name, Initialization where Data Type = int, Name = apples and Initialization = 5. We must always end the decleration of a variable with
             a semicolen(;)</p>
             <br/>
             <h4>Variable Name:</h4>

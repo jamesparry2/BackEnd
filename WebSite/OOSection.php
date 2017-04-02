@@ -27,10 +27,10 @@
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they?</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundamental: What are they?</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundamental: Variables</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundamental: Arthemtic Operators</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundamental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "Conditions.php"> Section 2: Conditions</a></li>
                                 <li><a href = "Conditions.php"> Section 2.1: If statement/Nested Statements </a></li>
@@ -52,7 +52,7 @@
                                 <li role = "separtor" class = "divider"></li>
                                 <li><a href = "Methods.php">Section 2: Methods</a></li>
                                 <li><a href = "Methods.php">Section 2.1: Defining Methods and return types</a></li>
-                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recurssion </a></li>
+                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recursion </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li class = "active"><a href = "">Section 3: Object Orientated Paradigm</a></li>
                                 <li class = "active"><a href = "">Section 3.1: Defining a class and creating constructors</a></li>
@@ -102,8 +102,8 @@
         <br/>
         <br/>
         <p>Object Orientation is one of the leading ways of thinking for High Level-Programming. It is used in many programming lanunages such as C++, C# and of course Java
-            due to the fact that it is much simplier to update a large piece of software that uses this paradigm rather than one that uses a procedual based approach.
-        This paradigm is built of the concept that we create objects in the programe that has have a set of attributes and behaviour. Attributes are the variables of the
+            due to the fact that it is much simplier to update a large piece of software that uses this paradigm rather than one that uses a procedural based approach.
+        This paradigm is built of the concept that we create objects in the program that has have a set of attributes and behaviour. Attributes are the variables of the
         class and behaviour are the methods belonging to the class. By default in Java there are always basic methods defined for classes you create. An example of this 
         would be the constructor. An example of a basic class can be seen below:</p>
         <img src = "../Resources/ClassDefine.png" alt = "Class example"/>
@@ -120,7 +120,7 @@
         consits of functionality methods, accessor methods, mutator methods and constructors. An exmaple can be seen below:</p>
         <img src = "../Resources/ClassDefine.png" alt = "Class example"/>
         <h4>Create Constructors:</h4>
-        <p>Create the constructor is important aspect as it allows us to create the object in a specfic way. It's decleration slightly differes from a normal method. Rather 
+        <p>Creating the constructor is important aspect as it allows us to create the object in a specfic way. Its decleration slightly differes from a normal method. Rather 
         than using a return type, we complelty omit a return type when defining the constuctor. We can then define parameters if we wish the object to have set attributes on
         creation, or we could have none at all. An example of creating a contructor can be seen below:</p>
         <img src = "../Resources/Construcor.png" alt = "Class example"/>
@@ -132,7 +132,7 @@
         <br/>
         <br/>
         <p>What is Encapsulation you ask? Encapsulation is a fundemental concept in Object Orientation. The idea is where we hide the data (i.e Variables) of a class from
-        other classes. We then allow access to these attributes through accessor methods only. This is to ensure data hiding and that not only class can edit the values of the
+        other classes. We then allow access to these attributes through accessor methods only. This is to ensure data hiding and that not any class that does not have permission can edit the values of the
         variables. This can be seen in the above screenshots where we have privatized the variable room and create a get and set method to access this variable.</p>
     </div>
     <br/>

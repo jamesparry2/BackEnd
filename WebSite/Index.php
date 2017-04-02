@@ -31,10 +31,10 @@
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they?</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundamental: What are they?</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundamental: Variables</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundamental: Arthemtic Operators</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundamental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "Conditions.php"> Section 2: Conditions</a></li>
                                 <li><a href = "Conditions.php"> Section 2.1: If statement/Nested Statements </a></li>
@@ -56,7 +56,7 @@
                                 <li role = "separtor" class = "divider"></li>
                                 <li><a href = "Methods.php">Section 2: Methods</a></li>
                                 <li><a href = "Methods.php">Section 2.1: Defining Methods and return types</a></li>
-                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recurssion </a></li>
+                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recursion </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "OOSection.php">Section 3: Object Orientated Paradigm</a></li>
                                 <li><a href = "OOSection.php">Section 3.1: Defining a class and creating constructors</a></li>
@@ -107,7 +107,7 @@
             <br>
             <br>
             <p> This application is here to help you get a full understanding of the Java Programming Lanunage. It will take you
-                from the very basics of the Java Programming, which includes Data Fundementals and Conditions, all the way up 
+                from the very basics of the Java Programming, which includes Data Fundamentals and Conditions, all the way up 
                 to advanced topics, such as Objects/Classes and Polymorphism. In the above tabs you will be able to navigate to
                 any topic of your choice however I would highly recommened you take a look at the interactive diagram in the overview
                 page as it tells you what you would need to know prior to moving onto the next topics. There will be questions at the bottom
@@ -119,8 +119,8 @@
             <h3 class = "install_tags">How to install Java!</h3>
             <br/>
             <br/>
-            <p> To make sure you can use Java you need certain tools intalled onto your computer. One is you will need a text editor, I would
-                highly recommend Notepad ++, and the Java Deveolpment Kit. I have provided links to the needed websites below for you to dowload
+            <p> To make sure you can use Java you need certain tools installed onto your computer. One is you will need a text editor, I would
+                highly recommend Notepad ++, and the Java Development Kit. I have provided links to the needed websites below for you to download
                 these tools:
             </p>
             <ul>
@@ -141,7 +141,7 @@
                 <h3> Step 1: </h3>
             
                 <p>
-                    First of all ensure that you download the most recent version for the Java JDK Website (At the current moment that is JDK8). Download the
+                    First of all ensure that you download the most recent version for the Java SDK Website (At the current moment that is SDK8). Download the
                     releveant one for your computer i.e if you have a 64bit OS download the 64bit version. A sample screenshot can be seen below:
                     <br/>
                     <br/>
@@ -151,8 +151,8 @@
                 
                 <h3>Step 2:</h3>
                 <p>
-                    Once found, accept all the terms and agrements to use the application and then download it.You must then located it in your Programe files 
-                    (not normally in Programe Files(x86)). Once you have found the file called Java, click on it and navigate to the bin file in it. Can see a screen-
+                    Once found, accept all the terms and agreements to use the application and then download it.You must then locate it in your program files 
+                    (not normally in program files(x86)). Once you have found the file called Java, click on it and navigate to the bin folder in it. Can see a screen-
                     shot below.
                     <br/>
                     <br/>

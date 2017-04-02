@@ -27,10 +27,10 @@
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they?</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundamental: What are they?</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundamental: Variables</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundamental: Arthemtic Operators</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundamental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "Conditions.php"> Section 2: Conditions</a></li>
                                 <li><a href = "Conditions.php"> Section 2.1: If statement/Nested Statements </a></li>
@@ -52,7 +52,7 @@
                                 <li role = "separtor" class = "divider"></li>
                                 <li><a href = "Methods.php">Section 2: Methods</a></li>
                                 <li><a href = "Methods.php">Section 2.1: Defining Methods and return types</a></li>
-                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recurssion </a></li>
+                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recursion </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "OOSection.php">Section 3: Object Orientated Paradigm</a></li>
                                 <li><a href = "OOSection.php">Section 3.1: Defining a class and creating constructors</a></li>
@@ -100,7 +100,7 @@
             <h3 class = "install_tags">Section 1: Collection Framework</h3>
             <br/>
             <br/>
-            <p> Now what is the Collection Framework? The Collection Framework is a external library that consitis of Data Strcuters and Methods that we can use. A collection is an object in Java
+            <p> Now what is the Collection Framework? The Collection Framework is a external library that consitis of Data Structures and Methods that we can use. A collection is an object in Java
             that can be of many types such as Arrays, Lists, Queues and ArrayLists. This is just a small sample of what is contained within the Collection Framework. The Collection Framework is 
             contained in the java.util. The API can be seen below:</p>
             <img class = "image2" src = "../Resources/Collection.png" alt = "Collection API"/>
@@ -112,7 +112,7 @@
             <br/>
             <br/>
             <h4>Arrays:</h4>
-            <p>Arrays are a data types that are used within many programming lanunages. Arrays are data structuers that can hold many different daya types depending on what you have declared them as. 
+            <p>Arrays are a data types that are used within many programming lanunages. Arrays are data structures that can hold many different daya types depending on what you have declared them as. 
             Arrays can be declared in many different ways. One way where you define the contents of the array, one where you declare the size and one where you intialize and define the type. Examples
             can be seen below:</p>
             <img src = "../Resources/Array.png" alt = "Defining Arrays"/>
@@ -128,7 +128,7 @@
             <h3 class = "install_tags">Section 1.2: 2D Arrays</h3>
             <br/>
             <br/>
-            <p>Two-Dimensial Arrays are useful for storing information that normally would be contained in row/colum layouts. A 2D Array is defined when you declare row/columns. An example 
+            <p>Two-Dimensional Arrays are useful for storing information that normally would be contained in row/colum layouts. A 2D Array is defined when you declare row/columns. An example 
             would be new int[7][3] which would have 7 rows and 3 columns. Now if you wanted to access a specfic element you would need enter the specfic row and column i.e [1][3]. If you
             want to access every element in a 2D array you would need a nested for loop in a for loop. Example below: </p>
             <img src = "../Resources/2DArray.png" alt = "Defining 2D Array"/>

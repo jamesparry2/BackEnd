@@ -29,10 +29,10 @@
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they?</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundamental: What are they?</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundamental: Variables</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundamental: Arthemtic Operators</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundamental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "Conditions.php"> Section 2: Conditions</a></li>
                                 <li><a href = "Conditions.php"> Section 2.1: If statement/Nested Statements </a></li>
@@ -54,7 +54,7 @@
                                 <li role = "separtor" class = "divider"></li>
                                 <li><a href = "Methods.php">Section 2: Methods</a></li>
                                 <li><a href = "Methods.php">Section 2.1: Defining Methods and return types</a></li>
-                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recurssion </a></li>
+                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recursion </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "OOSection.php">Section 3: Object Orientated Paradigm</a></li>
                                 <li><a href = "OOSection.php">Section 3.1: Defining a class and creating constructors</a></li>
@@ -104,7 +104,7 @@
             <br/>
             <br/>
             <p>A loop is a part of a program that keeps getting repeated until a specfic goal is reached. These can be useful for calculations that require multiple iterations. Some of the different 
-            kind of loops there are: For, While and Do Loops.</p>
+            kind of loops that exist: For, While and Do Loops.</p>
         </div>
         <br/>
         <div class = "step_section">
@@ -113,10 +113,10 @@
             <br/>
             <h4>While Loop:</h4>
             <p>The While Loops are used when we do not know how many iterations we are going to need. More commonly they are used when we have a specfic goal that is unknown to use. For the While Loop
-            as long as the condition is true, then the While Loops statements will be executed. Thesen statements are called the body of the loop. An example of While Loop can be seen below:</p>
+            as long as the condition is true, then the While Loops statements will be executed. These statements are called the body of the loop. An example of While Loop can be seen below:</p>
             <img src = "../Resources/While.png" alt="Example of a While Loop"/>
             <h4>Do-While Loop:</h4>
-            <p>The Do-Loop acts extremlly similar to the While Loop however the only difference is that the bloke of code will get executed at lease once, while with the While Loop it could be
+            <p>The Do-Loop acts extremely similar to the While Loop however the only difference is that the block of code will get executed at lease once, while with the While Loop it could be
             the case that it is never executed. An example can be seen below:</p>
             <img src = "../Resources/DoLoop.png" alt="Example of a Do Loop"/>
         </div>
@@ -138,7 +138,7 @@
             <br>
             <iframe class = "videoTutorial" src="https://www.youtube.com/embed/G460KZqmn0o" frameborder="0" allowfullscreen></iframe>  
         </div>
-        <br/>loopPage
+        <br/>
         <br/>
         <div class = "step_section">
             <div>

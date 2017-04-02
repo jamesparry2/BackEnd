@@ -27,10 +27,10 @@
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they?</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundamental: What are they?</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundamental: Variables</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundamental: Arthemtic Operators</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundamental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "Conditions.php"> Section 2: Conditions</a></li>
                                 <li><a href = "Conditions.php"> Section 2.1: If statement/Nested Statements </a></li>
@@ -52,7 +52,7 @@
                                 <li role = "separtor" class = "divider"></li>
                                 <li class = "active"><a href = "">Section 2: Methods</a></li>
                                 <li class = "active"><a href = "">Section 2.1: Defining Methods and return types</a></li>
-                                <li class = "active"><a href = "">Section 2.2: Scope for Variables and Recurssion </a></li>
+                                <li class = "active"><a href = "">Section 2.2: Scope for Variables and Recursion </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "OOSection.php">Section 3: Object Orientated Paradigm</a></li>
                                 <li><a href = "OOSection.php">Section 3.1: Defining a class and creating constructors</a></li>
@@ -99,7 +99,7 @@
             <h3 class = "install_tags">Section 2: Methods</h3>
             <br/>
             <br/>
-            <p>Methods are just a sequence of instructions with a name. Methods can have input parameters, as we have seen with Math.pow(2,3). Methods are extremlly 
+            <p>Methods are just a sequence of instructions with a name. Methods can have input parameters, as we have seen with Math.pow(2,3). Methods are extremely 
             useful as they allow us to reuse the same block of code over and over again but with different parameters. It also allows for ease of maintainabilty as
             the block of code is the only place where editing would be required. An example of a method can be seen below: </p>
             <img src = "../Resources/Method.png" alt = "Method Example"/>
@@ -111,30 +111,30 @@
             <br/>
             <br/>
             <h4>Defining the Method:</h4>
-            <p>Using an example we will show how we need to implement a method. We will look at devolping a method that computes the volume of the cube. Firstly we will
+            <p>Using an example we will show how we need to implement a method. We will look at developing a method that computes the volume of a cube. Firstly we will
             need to decide on a name, we will chose computeVol. Next we need to figure out the input parameters, in this case our input will be the sideLength. We then want
             our return type to be a double so for the beginig we would have produced <code>public double computeVol(double sideLenth){...}</code></p>
             <h4>Return Types:</h4>
             <p>Return Types are what you define at the begining of the method. Then within the method you use the keyword to return the result of the method. As soon as a return
-            statement is processed the method exits immediately. An exmaple can be seen below combining both defining methods example and return types:</p>
+            statement is processed the method exits immediately. An exmaple can be seen below combining both defining method example and return types:</p>
             <img src = "../Resources/Return.png" alt = "Return Type"/>
         </div>
         <br/>
         <br/>
         <div class = "step_section">
-            <h3 class = "install_tags">Section 2.2: Variables Scope and Recurssion </h3>
+            <h3 class = "install_tags">Section 2.2: Variable Scope and Recursion </h3>
             <br/>
             <br/>
             <h4>Variable Scope:</h4>
             <p>Eventually as your program grows bigger you will find the need for more variables, but depending on the where you place the variable depends on it's level of access. A variable
-            declared within the method that you create is called a local variable, this means the scope for this variable only exitis within that method. A variable declared at the begining of the program
+            declared within the method that you create is called a local variable, this means the scope for this variable only exists within that method. A variable declared at the begining of the program
             is called a global variable and can be access from any point within the program.</p>
             <img src = "../Resources/Scope.png" alt = "Scope Example"/>
             <br/>
             <br/>
-            <h4>Recurssion:</h4>
-            <p>Recursion is when a method calls itself from within it's own body. Imagine if we have a massive problem, if we can solve the basic form of the problem we can then use recurssion to
-            solve the more advanced forms of the problems. Normally in recurssion you'll have two conditions: a break case to stop it recurssing and a case where the method will call itself.</p>
+            <h4>Recursion:</h4>
+            <p>Recursion is when a method calls itself from within it's own body. Imagine if we have a massive problem, if we can solve the basic form of the problem we can then use recursion to
+            solve the more advanced forms of the problems. Normally in recursion you'll have two conditions: a break case to stop it recursing and a case where the method will call itself.</p>
         </div>
         <br/>
         <br/>
