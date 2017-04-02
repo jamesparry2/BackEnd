@@ -186,18 +186,8 @@
                     <input class = "btn btn-danger"type="submit" value="Update Highscore"/>                
                 </form>           
                 <?php
-                    $userName = $_SESSION['logged_in'];
-                    $newScore = $_GET['scoreForSession'];
-                    
-                    $updateScoreQuery = "UPDATE users SET Score='$newScore' WHERE Username = '$userName'";
-                    if(mysqli_query($db, $updateScoreQuery)){
-                        echo "Updated done";
-                    } else {
-                        echo "Not done" . mysqli_query($db);
-                    }
                 } else {
                 ?>
-				
                 <p><button class = "btn btn-primary" onClick = "DisplayQuestion('dataFundementals')">Question Time!</button></p>
                 <form class = "form-group" action ="" method="post">    
                     <p id = "question"></p>
@@ -205,8 +195,20 @@
 					<p id = "score"></p>
                     <p id = "button"></p>
                     <input class = "btn btn-danger" type="submit" value="Update Highscore"/>                
-                </form><?php } ?>
-               
+                </form>
+                <?php
+                    //This is where the update the score will be going
+                    $userName = $_SESSION['logged_in'];
+                    $newScore = $_GET['scoreForSession'];
+                    
+                    $updateScoreQuery = "UPDATE users SET Score='$newScore' WHERE Username = '$userName'";
+                    if(mysqli_query($db, $updateScoreQuery)){
+                        echo "Updated Score";
+                    } else {
+                        echo "Not done" . mysqli_query($db);
+                    }
+                }
+                ?>
             </div>
     	</div>
         <br/>

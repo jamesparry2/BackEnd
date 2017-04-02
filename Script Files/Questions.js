@@ -408,7 +408,7 @@ function DisplayQuestion(pageType){
     var pageType2 = pageType;
     history.pushState({}, null, "?scoreForSession=" + score);
     
-    if(score <= 6){
+    if(score < 6){
         var output = 0;
         if(output == 0){
             MultiQuest(multiChoiceQuestions, multiChoices, multiAnswers, pageType2);
@@ -498,7 +498,7 @@ function DisplayQuestion2(pageType, output){
     var pageType2 = pageType;
     history.pushState({}, null, "?scoreForSession=" + score);
     
-    if(score <= 6){
+    if(score < 6){
         //var output = Math.floor(Math.random() * 2);
         if(output == 0){
             MultiQuest(multiChoiceQuestions, multiChoices, multiAnswers, pageType2);
