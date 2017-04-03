@@ -27,10 +27,10 @@
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they?</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundamental: What are they?</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundamental: Variables</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundamental: Arthemtic Operators</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundamental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "Conditions.php"> Section 2: Conditions</a></li>
                                 <li><a href = "Conditions.php"> Section 2.1: If statement/Nested Statements </a></li>
@@ -52,7 +52,7 @@
                                 <li role = "separtor" class = "divider"></li>
                                 <li><a href = "Methods.php">Section 2: Methods</a></li>
                                 <li><a href = "Methods.php">Section 2.1: Defining Methods and return types</a></li>
-                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recurssion </a></li>
+                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recursion </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "OOSection.php">Section 3: Object Orientated Paradigm</a></li>
                                 <li><a href = "OOSection.php">Section 3.1: Defining a class and creating constructors</a></li>
@@ -113,7 +113,7 @@
         <br/>
         <br/>
         <h4>Throwing Exceptions: </h4>
-        <p>There are many ways to deal with excptions, one way is to use the throw keyword. This is used in cases where we know what exception can happen and want to deal with it
+        <p>There are many ways to deal with excpeptions, one way is to use the throws keyword. This is used in cases where we know what exception can happen and want to deal with it
         in the appropriate manner. When you throw an exception, execution does not continue with the next statement but with an exception handler. </p>
         <h4>Catching Exceptions: </h4>
         <p> The most common way to deal with catched exceptions is using a try/catch block. A try/catch is placed within the program. The try statement contains one or more statements
@@ -132,7 +132,7 @@
         <p> These exception represent defects in the program. To quote from The Java Programming Language, by Gosling, Arnold and Holmes: "Unchecked runtime exceptions represent conditions that,
         generally speaking, reflect errors in your programs logic and connot be reasonanly recoved from at run time." You can not establish try/catch exeptions for unchecked exceptions. </p>
         <h4>Finally Clause:</h4>
-        <p>Sometimes there will be cases where you need to excute a block of code, regardless if an exception is thrown or not. The finally clause will always execute when the try bloke exits. This
+        <p>Sometimes there will be cases where you need to execute a block of code, regardless if an exception is thrown or not. The finally clause will always execute when the try block exits. This
         is good in cases such that if you are to open a file stream, you can use the finally clause to ensure it is closed. This example can be viewed below: </p>
         <img src = "../Resources/Finally.png" alt = "Finally Example"/>
     </div>

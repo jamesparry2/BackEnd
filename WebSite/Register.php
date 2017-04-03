@@ -25,10 +25,10 @@
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they?</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundamental: What are they?</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundamental: Variables</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundamental: Arthemtic Operators</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundamental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "Conditions.php"> Section 2: Conditions</a></li>
                                 <li><a href = "Conditions.php"> Section 2.1: If statement/Nested Statements </a></li>
@@ -50,7 +50,7 @@
                                 <li role = "separtor" class = "divider"></li>
                                 <li><a href = "Methods.php">Section 2: Methods</a></li>
                                 <li><a href = "Methods.php">Section 2.1: Defining Methods and return types</a></li>
-                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recurssion </a></li>
+                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recursion </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "OOSection.php">Section 3: Object Orientated Paradigm</a></li>
                                 <li><a href = "OOSection.php">Section 3.1: Defining a class and creating constructors</a></li>
@@ -91,28 +91,7 @@
                 </div>    
         </nav>
     <body onload = "extendBack();"class = "main_section">
-    <!--<h1>PHP Connect to MYSQL</h1>-->
-    <!--    
-    <?php
-        //Firstly we create a command to query the database
-        
-        $query = "SELECT Password FROM users";
-        
-        //Secondly we check to see if the query would be sucssuful 
-        mysqli_query($db, $query) or die ('Error querying database');
-        
-        //Once we now the query is sucssful we then push it into a results variable and then use a built in PHP function to call it into an array
-        $results = mysqli_query($db, $query);
-        $row = mysqli_fetch_array($results);
-        
-        //While there is content in the array we keep looping through
-        while($row = mysqli_fetch_array($results)){
-            echo $row['Password'] . '<br/>';
-        }
-        //To close the connection to the DB
-        //mysqli_close($db);
-        
-    ?> -->   
+     
         
     <h2 class = "main_title">Register!</h2>
     <div class = "fillInForm">  

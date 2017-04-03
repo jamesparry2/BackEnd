@@ -26,10 +26,10 @@
                         <li class = "dropdown">
                             <a href = "#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Basic Topics <span class="caret"></span></a>
                             <ul class = "dropdown-menu">
-                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundemental: What are they?</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundemental: Variables</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundemental: Arthemtic Operators</a></li>
-                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundemental: Input/Output (I/O) </a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1 Data Fundamental: What are they?</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.1 Data Fundamental: Variables</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.2 Data Fundamental: Arthemtic Operators</a></li>
+                                <li><a href = "Data_Fundementals.php"> Section 1.3 Data Fundamental: Input/Output (I/O) </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "Conditions.php"> Section 2: Conditions</a></li>
                                 <li><a href = "Conditions.php"> Section 2.1: If statement/Nested Statements </a></li>
@@ -51,7 +51,7 @@
                                 <li role = "separtor" class = "divider"></li>
                                 <li><a href = "Methods.php">Section 2: Methods</a></li>
                                 <li><a href = "Methods.php">Section 2.1: Defining Methods and return types</a></li>
-                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recurssion </a></li>
+                                <li><a href = "Methods.php">Section 2.2: Scope for Variables and Recursion </a></li>
                                 <li role = "separator" class = "divider"></li>
                                 <li><a href = "OOSection.php">Section 3: Object Orientated Paradigm</a></li>
                                 <li><a href = "OOSection.php">Section 3.1: Defining a class and creating constructors</a></li>
@@ -100,7 +100,7 @@
         <h3 class = "install_tags">Section 3: Input/Output</h3>
         <br/>
         <br/>
-        <p>An intresting function in Java is using streams to be able to read in or output to a file. The two stream classes we will look at in this section are PrintWriter and Scanner. Since in our example we
+        <p>An interesting function in Java is using streams to be able to read in or output to a file. The two stream objects we will look at in this section are PrintWriter and Scanner. Since in our example we
         will be using files we will also need a File object. Being able to read input/output data is a very useful skill for processing real world data. An example of where reading data was important can be seen
         in WW2 where a group of brithish computer scientists would read in German transmision and crack their ciphers. </p>
     </div>
@@ -122,8 +122,8 @@
         <h3 class = "install_tags">Section 3.2: Writting in data</h3>
         <br/>
         <br/>
-        <p> To be able to output to a file we must first intialize a File object using it's constructor which takes a filename in as a parameter. Once we have done this we can pass the File object into the PrintWriter
-        parameters. We can then allow the user to input information and output it inro the file, once the user has finished inputing information into the file we can the progress onto the next section of the program.
+        <p> To be able to output to a file we must first intialize a File object using its constructor which takes a filename in as a parameter. Once we have done this we can pass the File object into the PrintWriter
+        parameters. We can then allow the user to input information and output it into the file, once the user has finished inputing information into the file we can the progress onto the next section of the program.
         Once done processing a file we must close it otherwise the manipulation we have performed will not be saved to the diskspace. One more issue is that if the file does not exist it will throw a
         FileNotFound Exception, we normally throw this exception on the main method. An example of reading can be seen below:</p>
         <img src = "../Resources/WriteExample.png" alt = "Write File Example"/>
